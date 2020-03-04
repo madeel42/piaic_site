@@ -1,0 +1,129 @@
+.mainContainer {
+    background-color: rgb(217, 221, 212) !important;
+    border: 1px solid rgb(217, 221, 212) !important;
+    margin-top: 60px!important;
+    width: 90%;
+}
+
+.text {
+    width: 75vw;
+    margin: auto;
+    margin-left: 250px;
+    color: #df1327!important;
+    font-family: sans-serif !important;
+    font-size: 14px;
+}
+
+.insideText {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    /* scroll-behavior: smooth; */
+}
+
+#sec {
+    padding-right: 550px;
+    color: #dc3545!important;
+    font-size: 14px;
+    font-weight: 600px;
+}
+
+.registration-link {
+    text-align: center;
+    margin: auto;
+}
+
+.link {
+    color: #096dd9;
+}
+
+.link:hover {
+    color: #40a9ff;
+}
+
+.courses {
+    text-align: center;
+    font-size: 32px !important;
+}
+
+.inside-Registration {
+    font-size: 17px;
+    font-weight: 600;
+    color: #dd515f!important;
+}
+#imageDiv{
+    background-color: #01645f;
+    height: 62.5px;
+    width: 94px;
+    text-align: center;
+    position: fixed;
+
+    margin-bottom: -3px;
+}
+#student-portal-logo{
+    width: 40px;
+    position: fixed;
+    margin-left: -10px;
+    margin-top: 5px;
+}
+.appBar{
+    /* background-color: rgb(217, 221, 212) !important; */
+    /* border: 1px solid rgb(217, 221, 212) !important; */
+    
+    background-color: white !important;
+
+
+}
+.student-portal-text-div{
+    text-align: right;
+    margin: auto;
+    /* position: fixed; */
+
+}
+.student-portal-text{
+    color: grey;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-weight: 500;
+    opacity: 0.7;
+    float: right;
+
+   
+}
+.student-portal-profile-logo-div{
+    background-color: grey;
+    /* margin-right: -20px; */
+    border-radius: 100px;
+float: right;
+    /* position: fixed; */
+}
+@media(min-width:500px) and (max-width:600px){
+    .student-portal-text{
+     display: none;
+     transition-duration: 2s;
+        
+    }
+}
+@media(min-width:601px) and (max-width:800px){
+    .student-portal-text{
+        font-size: 10px;
+        transition-duration: 2s;
+        margin-left: 50px;
+        
+    }
+}
+@media(min-width:801px)and (max-width:900px){
+    .student-portal-text{
+        transition-duration: 2s;
+        font-size: 13px;
+        margin-left: 60px;
+
+    }
+}
+.profile-creation-alert{
+    left: 30%;
+    /* right: 50%; */
+    position: absolute;
+    /* margin: auto; */
+    top: 14%;
+    text-align: justify;
+}

@@ -1,0 +1,60 @@
+body {
+    background-color: #F4F3EF;
+}
+
+#booksComponent {
+    height: auto;
+    width: 99vw;
+    margin-top: 60px;
+}
+
+/* =========================================================== */
+
+#booksComponent #textDiv {
+    width: 100%;
+    height: auto;
+}
+
+#booksComponent #textDiv span {
+    margin-left: 22vw;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+/* =========================================================== */
+
+#booksComponent #uploadBooksMainDiv {
+    width: 79%;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 20vw;
+}
+
+#booksComponent #uploadBooksMainDiv .booksDiv {
+    border: 1px solid red;
+    width: 110px;
+    height: 205px;
+    border-radius: 5px;
+    margin-left: 26px;
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+#booksComponent #uploadBooksMainDiv .booksDiv .image {
+    width: 100%;
+    height: 150px;
+    border-radius: 5px;
+}
+
+#booksComponent #uploadBooksMainDiv .booksDiv .nameDiv {
+    width: 100%;
+    text-align: center;
+    line-height: 15px;
+}
+
+#booksComponent #uploadBooksMainDiv .booksDiv .nameDiv .span {
+    font-size: 12px;
+    font-weight: 700;
+    color: slategray;
+    font-family: serif;
+}

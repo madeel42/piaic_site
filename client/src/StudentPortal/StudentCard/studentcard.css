@@ -1,0 +1,317 @@
+.maindiv-student-card{
+	width: 570px;
+	height: 340px;
+	padding: 0;
+	border-color: #00ce9f #000;
+	border-style: solid;
+	border-width: 3px 1px;
+	min-width: 570px;
+	max-width: 570px;
+	margin: auto;
+   
+	}
+	
+  .maindiv-student-card .innerdiv-student-card{
+	  padding-left: 10px;
+	  padding-bottom: 10px;
+	  
+  }
+  .maindiv-student-card .innerdiv-student-card .t1{
+	  /* display: inline-block; */
+	  font-size: 24px;
+	  margin-left: 10%;
+	  color: #017969;
+	  font-weight: 500;
+	  font-family: open,sans-serif;
+	  margin-top: 10px;
+  }
+  
+  
+  
+  .buttons-div{
+	  align-content: center;
+	  /* width: 100%; */
+	 margin-left: 40%;
+	display: flex;
+	flex-wrap: wrap;
+  }
+  
+  
+  
+  
+   .pr-button {
+	  border-radius: 4px;
+	  background-color: #68D7C4;
+	  border: none;
+	  color: #FFFFFF;
+	  text-align: center;
+	  font-size: 90%;
+	  padding: 10px;
+	  width: 100PX;
+	  transition: all 0.5s;
+	  cursor: pointer;
+	  margin: 5px;
+	}
+	
+	.pr-button .p-Button {
+	  cursor: pointer;
+	  display: inline-block;
+	  position: relative;
+	  transition: 0.5s;
+	  
+	}
+	
+	.pr-button .p-Button:after {
+	  content: '\00bb';
+	  position: absolute;
+	  opacity: 0;
+	  top: 0;
+	  right: -20px;
+	  transition: 0.5s;
+	  
+	}
+	
+	.pr-button:hover{
+	  background-color: white;
+	  color: #68D7C4;
+	  border: 1px solid #68D7C4;
+  
+	  
+	}
+	.pr-button:hover .p-Button {
+	  padding-right: 30%;
+  
+	  
+	}
+	
+	.pr-button:hover .p-Button:after {
+	  opacity: 1;
+	  right: 0;
+	  
+	}
+	
+  
+  
+  
+  
+  
+	.cr-button {
+	  border-radius: 4px;
+	  background-color: white;
+	  border: none;
+	  color: rgba(185,0,0,.49);
+	  /* text-align: center; */
+	  font-size: 90%;
+	  border: 1px solid rgba(185,0,0,.49);
+	  padding-left:0px ;
+	  width: 100PX;
+	  transition: all 0.5s;
+	  cursor: pointer;
+	  margin: 5px;
+	}
+	
+	.cr-button .p-Button {
+	  cursor: pointer;
+	  display: inline-block;
+	  position: relative;
+	  transition: 0.5s;
+	  
+	}
+	
+	.cr-button .p-Button:after {
+	  content: '\00bb';
+	  position: absolute;
+	  opacity: 0;
+	  top: 0;
+	  /* right: -0px; */
+	  transition: 0.5s;
+	  
+	}
+	
+	.cr-button:hover{
+	  background-color:rgba(185,0,0,.49);
+	  color: white;
+	  /* font-size: 13px; */
+	  /* border: 1px solid #68D7C4; */
+  
+	  
+	}
+	.cr-button:hover .p-Button {
+	  padding-right: 24%;
+  
+	  
+	}
+	
+	.cr-button:hover .p-Button:after {
+	  opacity: 1;
+	  right: 0;
+	  
+	}
+  
+  
+  
+  
+  
+  
+  
+  
+	#studentCard-info-table {
+	  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	  border-collapse: collapse;
+	  width: 100%;
+	  font-size: 17px;
+	}
+	#studentCard-info-table .text1{
+	  color:#017969 ;
+	}
+	#studentCard-info-table .text2{
+		margin-left: 30px;
+	}
+  
+	
+  
+  
+  
+  
+	.studentCard-Info{
+		
+  
+	  width: 100%;
+	  margin-top: 30px;
+	  line-height: 1.3;
+	}
+	.maindiv-student-card .picture-div .img-logo{
+	  height: 170px;
+	  width: 170px;
+  
+	  margin-left: 1%;
+	  border:1px solid #017969;
+	}
+  
+  
+	.maindiv-student-card .student-card-footer{
+	  height:50px;
+	  width: 100%;
+	  /* border: 1px solid; */
+	  margin-top:19px;
+	  display: flex;
+	}
+  
+  
+	.maindiv-student-card .student-card-footer .footer{
+	  width: 50%;
+	  height: 50px;
+	  display: flex;
+	}
+	.maindiv-student-card .student-card-footer .footer .Q1 {
+	  background-color: rgb(192, 57, 43);
+	  width: 339px;
+	  height: 28px;
+	  -webkit-clip-path: polygon(0 0,100% 0,80% 99%,0 100%);
+	  clip-path: polygon(0 0,100% 0,80% 99%,0 100%);
+	  margin-top: 23px;
+  }
+  
+	.maindiv-student-card .student-card-footer .footer .Q1 .text-q1{
+  
+	  margin-left: 40%;
+	  color: white;
+  
+	}
+  .maindiv-student-card .student-card-footer .footer .AIC {
+	  background-color: rgb(25, 42, 86);
+	  width: 361px;
+	  height: 28px;
+	  -webkit-clip-path: polygon(15% 0,95% 0,80% 99%,0 100%);
+	  clip-path: polygon(18% 0,95% 0,80% 99%,0 100%);
+	  margin-top: 23px;
+	  /* padding: 10px; */
+	  margin-left: -11%;
+  }
+  .maindiv-student-card .student-card-footer .footer .AIC .text-q1{
+  
+	margin-left: 40%;
+  
+	/* text-align: center; */
+	color: white;
+  
+  }
+  
+  
+  .maindiv-student-card .student-card-footer .signature-div{
+	height: 100%;
+	/* border: 1px solid; */
+	width: 50%;
+  }
+  .maindiv-student-card .student-card-footer .signature-div .line{
+	  height: 10%;
+	  width: 75%;
+	  border-bottom: 1.4px solid;
+	  margin-left: 22%;
+	  margin-top: 2%;
+  
+  }
+  
+  .maindiv-student-card .student-card-footer .signature-div .signature-text{
+		height: auto;
+		width: 100%;
+		margin-left: 22%;
+		margin-top: 0px;
+		
+  }
+  
+  
+  .maindiv-student-card .student-card-footer .signature-div .signature-text .sig-text{
+	font-weight: 500;
+		font-size: 1.5vw;
+		color: #017969;
+  }
+  
+  
+  /* *********************************************************************** */
+  
+  
+  
+  @media (min-width:0px) and (max-width:500px){
+	.maindiv-student-card{
+	  border: 1px solid green;
+	  width: 80%;
+	  height: auto;
+	}
+	.maindiv-student-card .picture-div{
+	  margin-left: 30%;
+	}
+  } 
+  @media (min-width:501px) and (max-width:700px){
+	.maindiv-student-card{
+	  border: 1px solid green;
+	  width: 70%;
+	  height: auto;
+	}
+	.maindiv-student-card .picture-div{
+	  margin-left: 30%;
+	}
+  } 
+  @media (min-width:701px) and (max-width:1000px){
+	.maindiv-student-card{
+	  border: 1px solid green;
+	  width: 50%;
+	  height: auto;
+	}
+	.maindiv-student-card .picture-div{
+	  margin-left: 30%;
+	}
+  } 
+  @media (min-width:1001px) and (max-width:1350px){
+	.maindiv-student-card{
+	  border: 1px solid green;
+	  width: 40%;
+	  height: auto;
+	}
+	.maindiv-student-card .picture-div{
+	  margin-left: 30%;
+	}
+  } 
+  
+  
+  

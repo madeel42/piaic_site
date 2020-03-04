@@ -1,0 +1,12 @@
+.cardabc .imgClass #img-id{
+    height: 50% !important;
+    width: 50% !important;
+    margin-top: 24% !important;
+}
+.cardabc .imgClass{
+    box-shadow: 0 0px 0px 0 grey, 0 0px 0px 0 grey;
+}
+
+.track{
+    font-family: sans-serif;
+}

@@ -1,0 +1,570 @@
+.vidContainer-main-div{
+    background-color: rgb(33, 37, 41);
+    height: fit-content;
+    width: 100vw    ;
+}
+.video-container{
+    width: fit-content;
+}
+.video-heading{
+    font-size: 42px;
+    text-align: left;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    padding-bottom: 20px;
+    padding-top: 50px;
+    margin-left: 50px;
+   
+}
+
+.video-list-images-div{
+    width: fit-content;
+}
+.video-container{
+    text-align: center;
+}
+.player{
+    /* width:100%; */
+    height:100%;
+    display:block;
+    /* margin-left:300px !important; */
+
+}
+
+.PresidentSays-videos-list{
+    padding-top: 20px;
+    width: 70%;
+    margin-bottom: 100px;
+    /* max-height: 570px; */
+    height: 390px;
+    background-color: #484848;
+    overflow-y: scroll;
+    display: inline-block;
+    padding:1em;
+    margin-left: 2em;
+
+}
+
+.vidmain_div{
+    display: grid;
+    grid-template-columns: 0.5fr 5fr;
+
+}
+.video-list-images{
+    width:70%;
+     /* border: 1px solid red; */
+    margin-left: -10px;
+   
+}.video-list-images-last{
+    transition-duration: 2s;
+    width: 50%;
+    margin-left: -10px;
+   }
+
+.video-list-images-div{
+    text-align: 
+    left;
+    width: fit-content;
+}
+.classes-detail-heading{
+    color: #9becd7;
+    /* border: 1px solid red; */
+    text-decoration-line: underline;
+    font-weight: bold;
+    font-size: 11px;
+    width: fit-content;
+    float: right;
+/* line-height: 0; */
+}
+.clases-detail-p{
+    font-size: 10px;
+    color: white;
+    width: fit-content;
+    /* width: 100px; */
+    /* border: 1px solid green; */
+    
+
+}
+.classes-detail-div{
+    margin-top: -100px;
+    width: 180px;
+    float: right;
+}
+.thumnail-div{
+    margin-top: 5px;
+    cursor: pointer;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 13px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    
+   
+    
+    background:  springgreen;
+  
+
+  }
+  .video-down-detail{
+      text-align: left;
+      margin-left: 70px;
+      margin-top: -40px;
+      width: 500px;
+      padding-bottom: 1em;
+  }
+  .video-down-detail-h1{
+    color: #9becd7;
+    line-height: 0;
+      font-size: 20px;
+      font-weight: 500;
+  }
+  
+ .video-down-detail-p{
+     color: white;
+     font-size: 12px;
+ }
+ @media (min-width:500px) and (max-width:600px){
+.vidmain_div{
+    width: fit-content;
+    display: block;
+}
+    .player{
+        position: relative;
+        display: block;
+        width: fit-content;
+        height: fit-content;
+        padding: 20px;
+        left: -40px;
+        /* border: 1px solid red; */
+       
+    }
+    .youtube-player-div{
+        width: 450px;
+        height: 250px;
+     
+        /* border: 1px solid gray; */
+    }
+    .PresidentSays-videos-list{
+        display: block !important;
+        margin-left: 50px;
+    }
+
+    .video-down-detail{
+        text-align: left;
+        margin-left: 70px;
+        margin-top: -40px;
+        width: 300px;
+        padding-bottom: 1em;
+    }
+    .video-down-detail-h1{
+      color: #9becd7;
+      line-height: 0;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    
+   .video-down-detail-p{
+       color: white;
+       font-size: 10px;
+   }
+   .video-list-images-last{
+    width: 50%;
+    margin-left: -10px;
+}
+ }
+ @media (min-width:601px) and (max-width:700px){
+    .vidmain_div{
+         transition-duration: 2s;
+         width: fit-content;
+        display: block;
+    }
+        .player{
+         transition-duration: 2s;
+         position: relative;
+            display: block;
+            width: fit-content;
+            height: fit-content;
+            padding: 20px;
+            left: -40px;
+            /* border: 1px solid red; */
+           
+        }
+        .youtube-player-div{
+            width:570px;
+         transition-duration: 2s;
+         height: 250px;
+         
+            /* border: 1px solid gray; */
+        }
+        .PresidentSays-videos-list{
+            display: block !important;
+         transition-duration: 2s;
+         margin-left: 70px;
+        }
+    
+        .video-down-detail{
+            text-align: left;
+         transition-duration: 2s;
+         margin-left: 70px;
+            margin-top: -40px;
+            width: 300px;
+            padding-bottom: 1em;
+        }
+        .video-down-detail-h1{
+          color: #9becd7;
+         transition-duration: 2s;
+         line-height: 0;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        
+       .video-down-detail-p{
+           color: white;
+           font-size: 10px;
+       }
+       .classes-detail-div{
+        margin-top: -100px;
+        width: 230px;   
+        /* float: right; */
+        /* margin-right:50px; */
+        /* border: 1px solid yellow; */
+    }.thumnail-div{
+        /* border: 1px solid red;   */
+    }
+    .video-list-images{
+        /* border: 1px solid green; */
+        width: 80%;
+    }
+    .classes-detail-heading{
+        color: #9becd7;
+        /* border: 1px solid red; */
+        text-decoration-line: underline;
+        font-weight: bold;
+        font-size: 14px;
+        width: fit-content;
+        float: right;
+    /* line-height: 0; */
+    }
+    .clases-detail-p{
+        font-size: 10px;
+        color: white;
+        width: fit-content;
+        /* width: 100px; */
+        /* border: 1px solid green; */
+        
+    
+    } .video-list-images-last{
+        width: 55%;
+    } }
+   
+     
+     @media (min-width:701px) and (max-width:796px){
+        .vidmain_div{
+            width: fit-content;
+         transition-duration: 2s;
+         display: block;
+        }
+            .player{
+                position: relative;
+                display: block;
+                width: fit-content;
+                height: fit-content;
+                padding: 20px;
+                left: -40px;
+                /* border: 1px solid red; */
+               
+            }
+            .youtube-player-div{
+                width:650px;
+                height: 300px;
+             
+                /* border: 1px solid gray; */
+            }
+            .PresidentSays-videos-list{
+                display: block !important;
+                margin-left: 80px;
+            }
+        
+            
+           .classes-detail-div{
+            margin-top: -120px;
+            width: 250px;   
+            /* float: right; */
+            /* margin-right:50px; */
+            /* border: 1px solid yellow; */
+        }.thumnail-div{
+            /* border: 1px solid red;   */
+        }
+        .video-list-images{
+            /* border: 1px solid green; */
+            width: 90%;
+        }
+        .classes-detail-heading{
+            color: #9becd7;
+            /* border: 1px solid red; */
+            text-decoration-line: underline;
+            font-weight: bold;
+            font-size: 16px;
+            width: fit-content;
+            float: right;
+        /* line-height: 0; */
+        }
+        .clases-detail-p{
+            font-size: 12px;
+            color: white;
+            width: fit-content;
+            /* width: 100px; */
+            /* border: 1px solid green; */
+            
+        
+        }
+        .video-list-images-last{
+            width: 60%;
+        }
+     }
+     @media (min-width:797px) and (max-width:850px){
+        .vidmain_div{
+         transition-duration: 2s;
+         width: fit-content;
+            display: block;
+        }
+            .player{
+                position: relative;
+                display: block;
+                width: fit-content;
+                height: fit-content;
+         transition-duration: 2s;
+         padding: 20px;
+                left: -40px;
+                /* border: 1px solid red; */
+               
+            }
+            .youtube-player-div{
+         transition-duration: 2s;
+         width:700px;
+                height: 300px;
+             
+                /* border: 1px solid gray; */
+            }
+            .PresidentSays-videos-list{
+                display: block !important;
+                margin-left: 80px;
+         transition-duration: 2s;
+         width: fit-content;
+            }
+        
+            
+           .classes-detail-div{
+            margin-top: -120px;
+            width: 250px;   
+            /* float: right; */
+            margin-right:50px;
+            /* border: 1px solid yellow; */
+         transition-duration: 2s;
+         margin-left: 220px;
+        }.thumnail-div{
+         transition-duration: 2s;
+         /* border: 1px solid red;   */
+        }
+        .video-list-images{
+         transition-duration: 2s;
+         /* border: 1px solid green; */
+            width: 90%;
+        }
+        .classes-detail-heading{
+            color: #9becd7;
+            /* border: 1px solid red; */
+            text-decoration-line: underline;
+            font-weight: bold;
+            font-size: 16px;
+            width: fit-content;
+         transition-duration: 2s;
+         float: right;
+        /* line-height: 0; */
+        }
+        .clases-detail-p{
+            font-size: 11px;
+         transition-duration: 2s;
+         color: white;
+            width: fit-content;
+            /* width: 100px; */
+            /* border: 1px solid green; */
+            
+        
+        }
+        .video-list-images-last{
+            width: 60%;
+        }
+
+     }
+     @media (min-width:851px) and (max-width:1000px){        .vidmain_div{
+         transition-duration: 2s;
+        width: fit-content;
+        display: block;
+    }
+        .player{
+            position: relative;
+            display: block;
+            width: fit-content;
+         transition-duration: 2s;
+         height: fit-content;
+            padding: 20px;
+            left: -40px;
+            /* border: 1px solid red; */
+           
+        }
+        .youtube-player-div{
+            width:750px;
+            height: 300px;
+         
+            /* border: 1px solid gray; */
+        }
+        .PresidentSays-videos-list{
+         transition-duration: 2s;
+         display: block !important;
+            margin-left: 80px;
+            width: fit-content;
+        }
+    
+        
+       .classes-detail-div{
+        margin-top: -120px;
+        width: 250px;   
+        /* float: right; */
+        margin-right:50px;
+        /* border: 1px solid yellow; */
+         transition-duration: 2s;
+         margin-left: 220px;
+    }.thumnail-div{
+        /* border: 1px solid red;   */
+    }
+    .video-list-images{
+        /* border: 1px solid green; */
+         transition-duration: 2s;
+         width: 90%;
+    }
+    .classes-detail-heading{
+        color: #9becd7;
+        /* border: 1px solid red; */
+        text-decoration-line: underline;
+         transition-duration: 2s;
+         font-weight: bold;
+        font-size: 16px;
+        width: fit-content;
+        float: right;
+    /* line-height: 0; */
+    }
+    .clases-detail-p{
+        font-size: 11px;
+        color: white;
+        width: fit-content;
+         transition-duration: 2s;
+         /* width: 100px; */
+        /* border: 1px solid green; */
+        
+    
+    }
+    .video-list-images-last{
+         transition-duration: 2s;
+         width: 60%;
+    }
+
+
+     }
+     @media (min-width:1001px) and (max-width:1150px){
+        .vidmain_div{
+            width: fit-content;
+            display: block;
+        }
+            .player{
+                position: relative;
+                display: block;
+                width: fit-content;
+         transition-duration: 2s;
+         height: fit-content;
+                padding: 20px;
+                left: -40px;
+                /* border: 1px solid red; */
+               
+            }
+            .youtube-player-div{
+                width:650px;
+                height: 300px;
+                margin-top: -800px;
+                /* margin-left: -280px; */
+         transition-duration: 2s;
+         margin-bottom: 40px;
+             margin-right: -30px;
+                /* border: 1px solid gray; */
+            }
+            .PresidentSays-videos-list{
+                /* display: block !important; */
+                /* margin-left: 80px; */
+                /* width: fit-content; */
+                width: 350px;
+                /* margin-top: 200px; */
+         transition-duration: 2s;
+         margin-bottom: 40px;
+                margin-right: -250px;
+            }   
+        
+            
+           .classes-detail-div{
+            margin-top: -70px;
+            width: 180px;   
+            /* float: right; */
+            /* margin-right:-0px;    */
+            /* border: 1px solid yellow; */
+            /* margin-left: 2990px; */
+        }.thumnail-div{
+         transition-duration: 2s;
+         /* border: 1px solid red;   */
+        }
+        .video-list-images{
+            /* border: 1px solid green; */
+         transition-duration: 2s;
+         width: 50%;
+        }
+        .classes-detail-heading{
+            color: #9becd7;
+            /* border: 1px solid red; */
+            text-decoration-line: underline;
+            font-weight: bold;
+            margin-top: -2px;
+            transition-duration: 2s;
+         font-size: 11px;
+            width: fit-content;
+            /* line-height: 2; */
+            float: right;
+        /* line-height: 0; */
+        }
+        .clases-detail-p{
+            font-size: 9px;
+            margin-top: 5px;
+            width: 180px !important;
+            text-align: justify;
+            overflow: hidden;
+            color: white;
+            width: fit-content;
+            /* width: 100px; */
+         transition-duration: 2s;
+         /* border: 1px solid green; */
+            
+        
+        }
+        .video-list-images-last{
+         transition-duration: 2s;
+         width: 40%;
+         margin-left: -10px;
+        }
+
+
+     }

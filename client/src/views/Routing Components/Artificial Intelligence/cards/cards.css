@@ -1,0 +1,150 @@
+#cards-div, .cards-div2 {
+    width: 96%;
+    height: auto;
+    position: relative;
+    top: -30px;
+    /* padding-left: 20px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+    position: relative;
+}
+
+.CardContentAI, .CardContentAI2 {
+    width: 300px;
+    height: 270px;
+    text-align: center;
+    margin-top: 25px;
+    margin-left: 1.5%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    -webkit-box-shadow: -1px 1px 33px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 1px 33px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 1px 33px -1px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+}
+
+.subDivsAI {
+    margin-top: 6vw;
+    text-align: center;
+}
+
+.subDivsAI h1 {
+    font-size: 2vw;
+}
+
+.subDivsAI p {
+    font-size: 14px;
+    position: relative;
+    top: -10px;
+    font-weight: 500;
+}
+
+.CardContentAI:nth-child(1) {
+    color: black;
+    background-color: #FFFFFF;
+}
+
+.CardContentAI:nth-child(2) {
+    background-color: #8C94A9;
+    color: white;
+}
+
+.CardContentAI:nth-child(3) {
+    background-color: #525F81;
+    color: white;
+}
+
+.CardContentAI:nth-child(4) {
+    background-color: #1B2956;
+    color: white;
+}
+
+#compulsory-Track {
+    color: rgb(43, 100, 95);
+    font-size: 2.5rem;
+    margin-left: 55px;
+    font-weight: 600;
+}
+
+.CardContentAI2:nth-child(1) {
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+.CardContentAI2:nth-child(2) {
+    background-color: #FFFFFF;
+}
+
+.CardContentAI2:nth-child(3) {
+    background-color: #424242;
+    color: white;
+    font-weight: 100;
+}
+
+.CardContentAI2:nth-child(4) {
+    background-color: #000000;
+    color: white;
+    font-weight: 100;
+}
+
+#image-gif {
+    width: 50%;
+    margin-top: 18%;
+}
+
+#line {
+    width: 90vw;
+    opacity: 0.5;
+}
+
+/* ----------------------------------media quries----------------------- */
+
+@media (min-width: 0px) and (max-width:1347px) {
+    .CardContentAI, .CardContentAI2 {
+        width: 350px;
+        transition: 0.5 all;
+    }
+}
+
+@media (min-width:1347px) {
+    .CardContentAI:nth-child(5) {
+        position: relative;
+        left: -162px;
+        transition: 0.5 all;
+    }
+    .CardContentAI:nth-child(6) {
+        position: relative;
+        left: -484px;
+        transition: 0.5 all;
+    }
+}
+
+@media (min-width: 0px) and (max-width:1160px) {
+    .CardContentAI, .CardContentAI2 {
+        width: 400px;
+        transition: 0.5 all;
+    }
+}
+
+@media (min-width: 0px) and (max-width:870px) {
+    .subDivsAI h1 {
+        font-size: xx-large;
+        transition: 0.5 all;
+        margin-top: 80px;
+    }
+    .subDivsAI p {
+        font-size: medium;
+        transition: 0.5 all;
+    }
+}
+
+@media (min-width: 0px) and (max-width:700px) {
+    .CardContentAI, .CardContentAI2 {
+        width: 350px;
+        height: 270px;
+        transition: 0.5 all;
+    }
+}

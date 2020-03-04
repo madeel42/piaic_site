@@ -1,0 +1,43 @@
+.carousel-main-div{
+    color: #fff;
+    background: #09BC94;
+     margin-top: -42px;
+    width: 100vw;
+}
+.carousel-heading{
+    font-size: 42px;
+    text-align: left;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    padding-bottom: 20px;
+    padding-top: 50px;
+    margin-left: 6%;
+}
+.Mui-paper-root{
+    background: #09BC94;
+
+
+}.carousel-detail-des{
+    text-align: left;
+    margin-left: 50px;
+    width: 400px;
+    display: block
+}
+.carousel-image{
+    width: 55% !important;
+    margin-left: 40px !important;
+    margin-bottom: 7% !important;
+}
+
+@media (min-width:500px) and (max-width:600px){
+    .carousel-image{
+        width: 85% !important;
+        margin-left: 40px !important;
+        margin-bottom: 7% !important;
+    }
+    .carousel-detail-des{
+        text-align: left;
+        margin-left: 50px;
+        width: 400px;
+    }
+}

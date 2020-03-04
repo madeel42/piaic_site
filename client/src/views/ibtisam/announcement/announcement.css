@@ -1,0 +1,129 @@
+*{
+    font-family: sans-serif;
+}
+#announcementComponent {
+    width: 98.7vw;
+    height: auto;
+    /* margin-top: 60px; */
+    padding: 100px;
+}
+
+#announcementComponent-heading {
+    text-align: center;
+    color: #3E7266;
+    font-family: inherit;
+}
+
+.announcementComponent-span:nth-child(1) {
+    font-weight: 500;
+    font-size: -webkit-xxx-large;
+}
+
+.announcementComponent-span:nth-child(2) {
+    font-weight: 500;
+    font-size: xx-large;
+}
+
+/* ====================================================================================== */
+
+#announcementComponent-mapDiv {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.announcementComponent-dataDiv {
+    height: 80px;
+    display: flex;
+}
+
+.announcementComponent-dateSpan {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: sans-serif;
+    margin-left: 80px;
+}
+
+.announcementComponent-circleDiv {
+    border: 3px solid black;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin-left: 40px;
+    margin-top: 5px;
+    background-color: #317667;
+    /* z-index: 1; */
+}
+
+.announcementComponent-lineDiv {
+    border: 1px solid #317667;
+    width: 4px;
+    background-color: #317667;
+    margin-left: -13.5px;
+    position: relative;
+    top: -60px;
+    z-index: -1;
+}
+
+.announcementComponent-testSpan {
+    margin-left: 50px;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/* =========================Media Queries================================================ */
+
+@media (min-width:581px) and (max-width:615px) {
+    .announcementComponent-dateSpan {
+        margin-left: 50px;
+        transition-duration: 1s;
+    }
+    .announcementComponent-circleDiv {
+        margin-left: 30px;
+    }
+    .announcementComponent-lineDiv {
+        margin-left: -12px;
+    }
+}
+
+@media (min-width:541px) and (max-width:580px) {
+    .announcementComponent-testSpan {
+        font-size: 16px;
+        margin-left: 35px;
+        transition-duration: 1s;
+    }
+    .announcementComponent-dateSpan {
+        margin-left: 50px;
+        font-size: 13px;
+        transition-duration: 1s;
+    }
+    .announcementComponent-circleDiv {
+        margin-left: 30px;
+    }
+    .announcementComponent-lineDiv {
+        margin-left: -12px;
+    }
+}
+
+@media (min-width:0px) and (max-width:540px) {
+    .announcementComponent-testSpan {
+        font-size: 15px;
+        margin-left: 30px;
+        transition-duration: 1s;
+    }
+    .announcementComponent-dateSpan {
+        margin-left: 35px;
+        font-size: 13px;
+        transition-duration: 1s;
+    }
+    .announcementComponent-circleDiv {
+        margin-left: 30px;
+    }
+    .announcementComponent-lineDiv {
+        margin-left: -11px;
+    }
+}
+
+/* ======================================End============================================= */

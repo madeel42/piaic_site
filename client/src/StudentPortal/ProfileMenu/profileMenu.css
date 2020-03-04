@@ -1,0 +1,24 @@
+#profileMenu {
+  background: #01645f;
+  top: 0px;
+  position: absolute;
+  left: 180px;
+  
+  display: inline-block;
+  color: white;
+  font-weight: normal;
+  font-size: 14px;
+  height: 89.7vh;
+  width: 200px;
+  visibility: hidden;
+  padding: 20px;
+}
+
+#profileMenu a {
+  display: block;
+  padding: 9px 5px;
+  width: 12vw;
+  text-align: left;
+
+  
+}

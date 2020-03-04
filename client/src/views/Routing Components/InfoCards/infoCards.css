@@ -1,0 +1,349 @@
+.IotDiv, #softwareForIotDiv, #cloudDiv, #rustDiv, #linuxDiv, #kubernetDiv, #kuberedgeDiv, #AiDiv {
+    /* border: 1px solid red; */
+    height: auto;
+    width: 97vw;
+    display: flex;
+    margin-top: 20px;
+}
+
+#overAllDiv {
+    /* border: 1px solid black; */
+    width: 98vw;
+    height: auto;
+    margin-top: 20px;
+}
+
+.embedDiv, #networkingDiv, #gitDiv, #systemDiv, #dockerDiv, #nodeDiv, #voiceDiv, #blockchainDiv {
+    /* border: 1px solid green; */
+    height: auto;
+    width: 97vw;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/* ------------------------------------------------------------------------------------------- */
+
+.box-container-iot, .box-container-AI-for-IOT, .box-container-kuberEdge, .box-container-softwae-iot, .box-container-cloud-computing, .box-container-rust-programming, .box-container-linux, .box-container-kubernet {
+    width: 32vw;
+    padding: 40px;
+    border-radius: 5px;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    box-shadow: 2px 2px 30px 0 rgba(0, 0, 0, .26);
+    background-color: #fff;
+    cursor: pointer;
+    font-family: myfontRegular, sans-serif;
+    margin-left: 55px;
+    padding-top: 15px!important;
+}
+
+.heading {
+    color: #192a56;
+    font-size: 16px;
+    font-weight: 700;
+    position: relative;
+    top: 15px;
+}
+
+.para-data {
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: justify;
+    word-spacing: 1px;
+    color: #192a56;
+}
+
+.my-thumbnail {
+    width: 8vw;
+    height: 8vw;
+    margin: 0 10px -5px 0;
+    display: inline;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-color: #fff;
+}
+
+#circle-div-iot-1A, #circle-div-AI-for-IOT, #circle-div-1C, #circle-div-kuberEdge, #circle-div-1E, #circle-div-1G, #circle-div-linux, #circle-div-kubernet {
+    position: relative;
+    border: 1px solid #4C8B82;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    border-width: 2px;
+    margin-left: 4vw;
+}
+
+#text-1A, #text-1C, #text-1E, #text-1G, #text-linux, #text-kubernet, #text-kuberEdge {
+    left: 27px;
+    font-weight: 600;
+    position: absolute;
+    top: 33%
+}
+
+/* ----------------------------------------------------------------------------------- */
+
+.box-container-embed-system, .box-container-blockchain, .box-container-voiceComputing, .box-container-networking-iot, .box-container-git, .box-container-SystemsProgramming, .box-container-docker, .box-container-nojejs {
+    width: 32vw;
+    padding: 40px;
+    border-radius: 5px;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    box-shadow: 2px 2px 30px 0 rgba(0, 0, 0, .26);
+    background-color: #fff;
+    cursor: pointer;
+    font-family: sans-serif;
+    padding-top: 15px!important;
+}
+
+#circle-div-1B, #circle-div-blockchain, #circle-div-voiceComputing, #circle-div-nojejs, #circle-div-1D, #circle-div-1F, #circle-div-SystemsProgramming, #circle-div-docker {
+    position: relative;
+    border: 1px solid #4C8B82;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    border-width: 2px;
+    left: -8vw;
+}
+
+#text-1B, #text-1D, #text-blockchain, #text-AI-for-IOT, #text-voiceComputing, #text-nojejs, #text-voiceComputing, #text-1F, #text-SystemsProgramming, #text-docker {
+    position: absolute;
+    top: 30%!important;
+    left: 28px;
+    font-weight: 600;
+}
+
+/* -------------------------------------- */
+
+.color {
+    background-color: #1ea7a2;
+    color: white;
+}
+
+/* --------------------------------------------------line-------------------------------------------- */
+
+#line-div-1A {
+    border: 1px solid #1ea7a2;
+    width: 2px;
+    height: 4214px;
+    background-color: #1ea7a2;
+    position: relative;
+    left: 33px;
+    top: 70px;
+}
+
+/* --------------------------------------------------- */
+
+#circle-div-1B, #circle-div-1D, #circle-div-1F, #circle-div-1C, #circle-div-1E, #circle-div-1G, #circle-div-1A {
+    background-color: white!important;
+}
+
+/* -----------------------------------------------media Quries--------------------------------------- */
+
+@media screen and (max-width:1350px) {
+    #circle-div-1B, #circle-div-1D, #circle-div-1F, #circle-div-SystemsProgramming, #circle-div-docker, #circle-div-nojejs, #circle-div-blockchain, #circle-div-voiceComputing {
+        transition-duration: 0.3s;
+        left: -104px;
+    }
+}
+
+@media screen and (max-width:1330px) {
+    #circle-div-1B, #circle-div-1D, #circle-div-1F, #circle-div-SystemsProgramming, #circle-div-docker, #circle-div-nojejs, #circle-div-blockchain, #circle-div-voiceComputing {
+        transition-duration: 0.3s;
+        left: -97px;
+    }
+}
+
+@media screen and (max-width:1330px) {
+    #circle-div-1B, #circle-div-1D, #circle-div-1F, #circle-div-SystemsProgramming, #circle-div-docker, #circle-div-nojejs, #circle-div-blockchain, #circle-div-voiceComputing {
+        transition-duration: 0.3s;
+        left: -89px;
+    }
+}
+
+@media screen and (max-width:1275px) {
+    #circle-div-1B, #circle-div-1D, #circle-div-1F, #circle-div-SystemsProgramming, #circle-div-docker, #circle-div-nojejs, #circle-div-blockchain, #circle-div-voiceComputing {
+        transition-duration: 0.3s;
+        left: -82px;
+    }
+}
+
+@media screen and (max-width:1250px) {
+    #circle-div-1B, #circle-div-1D, #circle-div-1F, #circle-div-SystemsProgramming, #circle-div-docker, #circle-div-nojejs, #circle-div-blockchain, #circle-div-voiceComputing {
+        transition-duration: 0.3s;
+        left: -74px;
+    }
+}
+
+@media screen and (max-width:1220px) {
+    #circle-div-1B, #circle-div-1D, #circle-div-1F, #circle-div-SystemsProgramming, #circle-div-docker, #circle-div-nojejs, #circle-div-blockchain, #circle-div-voiceComputing {
+        transition-duration: 0.3s;
+        left: -65px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    #circle-div-1B, #circle-div-1D, #circle-div-1F, #circle-div-SystemsProgramming, #circle-div-docker, #circle-div-nojejs, #circle-div-blockchain, #circle-div-voiceComputing {
+        transition-duration: 0.3s;
+        left: -61px;
+    }
+}
+
+@media screen and (max-width:1180px) {
+    #circle-div-1B, #circle-div-1D, #circle-div-1F, #circle-div-SystemsProgramming, #circle-div-docker, #circle-div-nojejs, #circle-div-blockchain, #circle-div-voiceComputing {
+        transition-duration: 0.3s;
+        left: -54px;
+    }
+}
+
+@media screen and (max-width:1150px) {
+    #circle-div-1B, #circle-div-1D, #circle-div-1F, #circle-div-SystemsProgramming, #circle-div-docker, #circle-div-nojejs, #circle-div-blockchain, #circle-div-voiceComputing {
+        transition-duration: 0.3s;
+        left: -45px;
+    }
+}
+
+@media screen and (max-width:1130px) {
+    #circle-div-1B, #circle-div-1D, #circle-div-1F, #circle-div-SystemsProgramming, #circle-div-docker, #circle-div-nojejs, #circle-div-blockchain, #circle-div-voiceComputing {
+        transition-duration: 0.3s;
+        left: -40px;
+    }
+}
+
+@media screen and (max-width:1110px) {
+    #circle-div-1B, #circle-div-1D, #circle-div-1F, #circle-div-SystemsProgramming, #circle-div-docker, #circle-div-nojejs, #circle-div-blockchain, #circle-div-voiceComputing {
+        transition-duration: 0.3s;
+        left: -35px;
+    }
+}
+
+@media screen and (max-width:1090px) {
+    #circle-div-1B, #circle-div-1D, #circle-div-1F, #circle-div-SystemsProgramming, #circle-div-docker, #circle-div-nojejs, #circle-div-blockchain, #circle-div-voiceComputing {
+        transition-duration: 0.3s;
+        left: -30px;
+    }
+}
+
+@media screen and (max-width:1070px) {
+    #circle-div-1B, #circle-div-1D, #circle-div-1F, #circle-div-SystemsProgramming, #circle-div-docker, #circle-div-nojejs, #circle-div-blockchain, #circle-div-voiceComputing {
+        transition-duration: 0.3s;
+        left: -25px;
+    }
+}
+
+@media screen and (max-width:1070px) {
+    #circle-div-1B, #circle-div-1D, #circle-div-1F, #circle-div-SystemsProgramming, #circle-div-docker, #circle-div-nojejs, #circle-div-blockchain, #circle-div-voiceComputing {
+        transition-duration: 0.3s;
+        left: -18px;
+    }
+    #line-div-1A {
+        display: none;
+    }
+}
+
+@media (min-width: 1098px) and (max-width:1298px) {
+    #line-div-1A {
+        height: 4340px;
+    }
+}
+
+@media (min-width: 701px) and (max-width:1000px) {
+    .box-container-embed-system, .box-container-blockchain, .box-container-voiceComputing, .box-container-networking-iot, .box-container-git, .box-container-SystemsProgramming, .box-container-docker, .box-container-nojejs {
+        margin-top: 100px;
+        width: 50vw;
+        transition-duration: 0.5s;
+    }
+    .box-container-iot, .box-container-AI-for-IOT, .box-container-kuberEdge, .box-container-softwae-iot, .box-container-cloud-computing, .box-container-rust-programming, .box-container-linux, .box-container-kubernet {
+        margin-top: 100px;
+        width: 40vw;
+        transition-duration: 0.5s;
+    }
+    #circle-div-iot-1A, #circle-div-AI-for-IOT, #circle-div-1C, #circle-div-kuberEdge, #circle-div-1E, #circle-div-1G, #circle-div-linux, #circle-div-kubernet {
+        left: -300px;
+        transition-duration: 0.5s;
+    }
+    #circle-div-1B, #circle-div-1D, #circle-div-1F, #circle-div-SystemsProgramming, #circle-div-docker, #circle-div-nojejs, #circle-div-blockchain, #circle-div-voiceComputing {
+        transition-duration: 0.5s;
+        left: 40vw;
+    }
+}
+
+@media (min-width: 0px) and (max-width:700px) {
+    .box-container-embed-system, .box-container-blockchain, .box-container-voiceComputing, .box-container-networking-iot, .box-container-git, .box-container-SystemsProgramming, .box-container-docker, .box-container-nojejs {
+        margin-top: 100px;
+        width: 61vw;
+        margin-right: 12vw;
+        transition-duration: 0.5s;
+    }
+    .box-container-iot, .box-container-AI-for-IOT, .box-container-kuberEdge, .box-container-softwae-iot, .box-container-cloud-computing, .box-container-rust-programming, .box-container-linux, .box-container-kubernet {
+        margin-top: 100px;
+        width: 65vw;
+        margin-left: 70px!important;
+        transition-duration: 0.5s;
+    }
+    #circle-div-iot-1A, #circle-div-AI-for-IOT, #circle-div-1C, #circle-div-kuberEdge, #circle-div-1E, #circle-div-1G, #circle-div-linux, #circle-div-kubernet {
+        left: -55vh;
+        border-radius: 50%;
+        transition-duration: 0.5s;
+    }
+    #circle-div-1B, #circle-div-1D, #circle-div-1F, #circle-div-SystemsProgramming, #circle-div-docker, #circle-div-nojejs, #circle-div-blockchain, #circle-div-voiceComputing {
+        transition-duration: 0.5s;
+        left: 40vw;
+    }
+}
+
+@media (min-width: 0px) and (max-width:630px) {
+    #circle-div-iot-1A, #circle-div-AI-for-IOT, #circle-div-1C, #circle-div-kuberEdge, #circle-div-1E, #circle-div-1G, #circle-div-linux, #circle-div-kubernet {
+        left: -51vh;
+        border-radius: 50%;
+        transition-duration: 0.5s;
+    }
+}
+
+@media (min-width: 0px) and (max-width:630px) {
+    #circle-div-iot-1A, #circle-div-AI-for-IOT, #circle-div-1C, #circle-div-kuberEdge, #circle-div-1E, #circle-div-1G, #circle-div-linux, #circle-div-kubernet {
+        left: -45vw;
+        border-radius: 50%;
+        transition-duration: 0.5s;
+    }
+    #text-1A, #text-1C, #text-1E, #text-1G, #text-linux, #text-kubernet, #text-kuberEdge {
+        left: 19px!important;
+    }
+}
+
+@media (min-width:1281px) and (max-width:1298px) {
+    #line-div-1A {
+        height: 4280px!important;
+    }
+}
+
+@media (min-width:1232px) and (max-width:1280px) {
+    #line-div-1A {
+        height: 4353px!important;
+    }
+}
+
+@media (min-width:1171px) and (max-width:1231px) {
+    #line-div-1A {
+        height: 4444px!important;
+    }
+}
+
+@media (min-width:1093px) and (max-width:1170px) {
+    #line-div-1A {
+        height: 4535px!important;
+    }
+}
+
+@media (min-width:0px) and (max-width:1092px) {
+    #line-div-1A {
+        height: 4640px!important;
+    }
+}

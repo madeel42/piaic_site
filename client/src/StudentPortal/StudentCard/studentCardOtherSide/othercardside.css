@@ -1,0 +1,81 @@
+    /* .scndcard-inner-main-div{
+    height: auto;
+    border:1px solid;
+    transform: rotate(180deg);
+    margin-bottom: 0%;
+}
+.cardside-text{
+    color: #dc3545!important;
+    font-weight: 500;
+}
+
+.frstinner-main-div{
+    height: 330px;
+    width: 45%;
+    text-align: center;
+    border: 1px solid;
+    margin:auto;
+} */
+
+
+
+
+
+.sndCard-main-div{
+    height: 340px;
+    width: 42.3%;
+    padding: 0;
+    border-color: #00ce9f #000;
+    border-style: solid;
+    border-width: 3px 1px;
+    min-width: 570px;
+    max-width: 570px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.sndCard-main-div .sndCard-text-div{
+    width: 100%;
+    /* height: 50px; */
+    transform: rotate(180deg);
+    text-align: center;
+    margin-top: 10px;
+}
+
+.sndCard-main-div .sndCard-text-div .sndCard-text-span{
+    padding-top: 10px;
+    color: #dc3545!important;
+    font-weight: 500;
+    font-size: 15px;
+}
+.sndCard-main-div .scndinnr-div{
+    /* border: 1px solid   ; */
+    display: flex;
+    margin-left: 33px;
+}
+.sndCard-main-div .scndinnr-div .qrCode{
+    transform: rotate(180deg);
+    
+}
+.quarter-div-text {
+    transform: rotate(180deg);
+    position: relative;
+    top: 65px;
+    left: 125px;
+    font-size: 135px;
+    color: #00cf9e;
+    font-weight: 500;
+    text-align: center;
+    height: 100%;
+    display: flex;
+}
+.qr-div{
+    display: flex;
+    
+}
+
+.qr-component{
+    position: relative;
+    top: -32px;
+    left: -40px;
+}

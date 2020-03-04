@@ -1,0 +1,51 @@
+.Wit-main-logo{
+    width: 100vw;
+    text-align:left;
+    height: fit-content;
+
+}
+.wit-image{
+    width: 100vw;
+    margin: auto;
+    height: 90vh;
+
+    
+}
+.wit-para{
+    padding: 100px;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bolder;
+    color: rgba(70,70,75,.51);
+    background-color: #ffffff;
+}
+.wit-heading{
+    font-size: 4vw;
+    color: #3f4247!important;
+    text-transform: uppercase;
+    word-spacing: 2vw;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 20px;
+    letter-spacing: normal;
+    color: #423f3f;
+    margin: 20px;
+    text-align: center;
+    text-decoration: underline;
+}
+.gallery-para{
+    letter-spacing: 1vw;
+    line-height: -10px;
+    width: 80%;
+    border-top: 1.5px solid rgba(0,0,0,.548);
+    padding-top: 10px;
+    margin: auto auto 20px;
+    font-weight: 700;
+    text-align: center;
+}
+.gallery{
+    margin: 2%;
+}

@@ -1,0 +1,184 @@
+*{
+    font-family: sans-serif;
+}
+#lectureComponent {
+    /* margin-top: 40px; */
+    width: 100vw;
+    height: auto;
+}
+
+#lectureComponent-headingDiv {
+    width: 100%;
+    padding-top: 100px;
+    
+}
+
+#lectureComponent-headingDiv-span {
+    margin-left: -30vw;
+    word-spacing: 5px;
+    font-size: 24px;
+    font-family: sans-serif;
+    font-weight: 700;
+    opacity: 0.7;
+    z-index: -1;
+    position: relative;
+}
+
+/* =========================================================================== */
+
+.lectureComponent-cardsDiv {
+    margin-top: 20px;
+    width: 100%;
+    padding: 5px;
+    height: auto;
+}
+
+
+.lectureComponent-cardsDiv-card {
+    width: 35%;
+    /* padding: 50px; */
+    margin: 10px;
+    height: 300px;
+    border: 1px solid white;
+    margin-left: 23vw;
+    border-radius: 5px;
+    background-color: white;
+    position: relative;
+    -webkit-box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.75);
+    z-index: -1;
+}
+
+.lectureComponent-cardsDiv-card-spanDiv {
+    margin-top: 25px;
+    width: 99%;
+    text-align: left;
+}
+
+.lectureComponent-cardsDiv-card-spanDiv-span {
+    margin-left: 3vw;
+    font-family: monospace;
+    font-size: 20px;
+    opacity: 0.5;
+    
+}
+
+/* ============================================================================= */
+
+.lectureComponent-textDiv {
+    margin-top: 7px;
+    text-align: left;
+}
+
+.lectureComponent-textDiv-span {
+    margin-left: 3vw;
+    /* font-size: smaller; */
+    font-weight: 600;
+    font-size: 22px;
+    opacity: 0.7;
+}
+
+/* ============================================================================= */
+
+.lectureComponent-dataDiv {
+    width: 80%;
+    height: auto;
+    margin-left: 3vw;
+    padding: -1px;
+    text-align: left;
+
+}
+
+.lectureComponent-dataDiv-p {
+    font-size: 15px;
+    /* letter-spacing: 1.5px; */
+    line-height: 1;
+    opacity: 0.7;
+    margin: 20px;
+    text-align: left;
+}
+
+/* ============================================================================== */
+
+.lectureComponent-line {
+    margin-top: 70px;
+    opacity: 0.5;
+}
+
+/* ============================================================================== */
+
+.lectureComponent-buttonDiv {
+    width: 100%;
+    height: auto;
+    /* display: flex; */
+    /* flex-direction: row-reverse; */
+    cursor: pointer;
+}
+.viewCourse-btn{
+    margin-left: auto;
+    color: #52c9ba;
+    font-family: Open Sans,sans-serif;
+    border: 1px solid #52c9ba;
+    font-size: .75rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    height: 2.3rem;
+    padding: 0 2rem;
+    margin-right: 5px;
+    background: #fff;
+    cursor: pointer ;
+    box-shadow: 0 0 8px 0 rgba(17,22,26,.16), 0 4px 8px 0 rgba(17,22,26,.08), 0 8px 16px 0 rgba(17,22,26,.08);
+
+}
+.viewCourse-btn:hover{
+    background-color: #52c9ba;
+    color: white;
+    display: none;
+}
+.MuiButton-outlinedSecondary {
+    color: rgb(22, 117, 116)!important;
+    border-style: none!important;
+    margin-right: 10px!important;
+    border-radius: 2px!important;
+    height: 30px!important;
+    font-size: 10px!important;
+    margin-top: 5px!important;
+    margin-bottom: 10px!important;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(25, 97, 94, 1);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(25, 97, 94, 1);
+    box-shadow: 0px 1px 5px 0px rgba(25, 97, 94, 1);
+}
+
+.MuiButton-outlinedSecondary:hover {
+    background-color: rgb(22, 117, 116)!important;
+    color: white!important;
+}
+
+/* =====================================media queries============================= */
+
+@media (min-width:551px) and (max-width:600px) {
+    .lectureComponent-cardsDiv-card {
+        margin-left: 18vw;
+        transition-duration: 0.5s;
+    }
+    #lectureComponent-headingDiv-span {
+        margin-left: 18vw;
+        transition-duration: 0.5s;
+    }
+}
+
+@media (min-width:0px) and (max-width:550px) {
+    .lectureComponent-cardsDiv-card {
+        margin-left: 10vw;
+        transition-duration: 0.5s;
+    }
+    #lectureComponent-headingDiv-span {
+        margin-left: 33vw;
+        transition-duration: 0.5s;
+    }
+}
+
+/* ==========================================THE END=============================== */

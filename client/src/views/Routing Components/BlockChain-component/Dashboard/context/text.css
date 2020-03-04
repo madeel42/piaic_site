@@ -1,0 +1,309 @@
+.parent-div{
+    padding-bottom: 10px;
+}
+.mainDiv .bitcoin{
+    width: 40vw;
+    display: inline-block;
+    padding: 40px;
+    border-radius: 5px;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    box-shadow: 2px 2px 30px 0 rgba(0,0,0,.26);
+    background-color: #fff;
+    cursor: pointer;
+    margin-left: 3%;
+    margin-top: 5%;
+}
+.mainDiv .t2{
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: justify;
+    word-spacing: 1px;
+    color: #192a56; 
+}
+.mainDiv .bitImg{
+    float: left;
+}
+
+
+
+
+.mainDiv2 .bitcoin{
+    width: 40vw;
+    display: inline-block;
+    padding: 40px;
+    border-radius: 5px;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    box-shadow: 2px 2px 30px 0 rgba(0,0,0,.26);
+    background-color: #fff;
+    cursor: pointer;
+    margin-left: 3%;
+    margin-top: 5%;
+    float: right;
+}
+.mainDiv2 .t2{
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: justify;
+    word-spacing: 1px;
+    color: #192a56; 
+}
+.mainDiv2 .bitImg{
+    float: left;
+}
+
+.mainDiv2{
+    width: 100%;
+    
+}
+
+
+
+
+.mainDiv3{
+    clear: both;
+}
+
+.mainDiv3 .bitcoin{
+    width: 40vw;
+    display: inline-block;
+    padding: 40px;
+    border-radius: 5px;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    box-shadow: 2px 2px 30px 0 rgba(0,0,0,.26);
+    background-color: #fff;
+    cursor: pointer;
+    margin-left: 3%;
+    margin-top: 5%;
+    float: left;
+}
+.mainDiv3 .t2{
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: justify;
+    word-spacing: 1px;
+    color: #192a56; 
+}
+.mainDiv3 .bitImg{
+    float: left;
+}
+
+
+
+
+
+
+
+.mainDiv3{
+    clear: both;
+}
+
+.mainDiv3 .bitcoin{
+    width: 40vw;
+    display: inline-block;
+    padding: 40px;
+    border-radius: 5px;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    box-shadow: 2px 2px 30px 0 rgba(0,0,0,.26);
+    background-color: #fff;
+    cursor: pointer;
+    margin-left: 3%;
+    margin-top: 5%;
+    float: left;
+}
+.mainDiv3 .t2{
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: justify;
+    word-spacing: 1px;
+    color: #192a56; 
+}
+.mainDiv3 .bitImg{
+    float: left;
+}
+
+
+
+
+
+.mainDiv4{
+    clear: both;
+}
+
+.mainDiv4 .bitcoin{
+    width: 40vw;
+    display: inline-block;
+    padding: 40px;
+    border-radius: 5px;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    box-shadow: 2px 2px 30px 0 rgba(0,0,0,.26);
+    background-color: #fff;
+    cursor: pointer;
+    margin-left: 3%;
+    margin-top: 5%;
+    float: right;
+}
+.mainDiv4 .t2{
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: justify;
+    word-spacing: 1px;
+    color: #192a56; 
+}
+.mainDiv4 .bitImg{
+    float: left;
+}
+
+
+
+
+
+
+.mainDiv5{
+    clear: both;
+}
+
+.mainDiv5 .bitcoin{
+    width: 40vw;
+    display: inline-block;
+    padding: 40px;
+    border-radius: 5px;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    box-shadow: 2px 2px 30px 0 rgba(0,0,0,.26);
+    background-color: #fff;
+    cursor: pointer;
+    margin-left: 3%;
+    margin-top: 5%;
+    float: left;
+}
+.mainDiv5 .t2{
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: justify;
+    word-spacing: 1px;
+    color: #192a56; 
+}
+.mainDiv5 .bitImg{
+    float: left;
+}
+
+
+
+
+
+
+.mainDiv6{
+    clear: both;
+}
+
+.mainDiv6 .bitcoin{
+    width: 40vw;
+    display: inline-block;
+    padding: 40px;
+    border-radius: 5px;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    box-shadow: 2px 2px 30px 0 rgba(0,0,0,.26);
+    background-color: #fff;
+    cursor: pointer;
+    margin-left: 3%;
+    margin-top: 5%;
+    float: right;
+}
+.mainDiv6 .t2{
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: justify;
+    word-spacing: 1px;
+    color: #192a56; 
+}
+.mainDiv6 .bitImg{
+    float: left;
+}
+
+
+
+
+
+
+
+
+.mainDiv7{
+    clear: both;
+    
+}
+
+.mainDiv7 .bitcoin{
+    width: 40vw;
+    display: inline-block;
+    padding: 40px;
+    border-radius: 5px;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    box-shadow: 2px 2px 30px 0 rgba(0,0,0,.26);
+    background-color: #fff;
+    cursor: pointer;
+    margin-left: 3%;
+    margin-top: 5%;
+    float: left;
+}
+.mainDiv7 .t2{
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: justify;
+    word-spacing: 1px;
+    color: #192a56; 
+}
+.mainDiv7 .bitImg{
+    float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

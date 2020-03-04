@@ -1,0 +1,84 @@
+#examComponent {
+    width: 99.5vw;
+    height: 100vh;
+    /* margin-top: 60px; */
+    /* padding: 90px; */
+}
+.exam-Component-container{
+    padding: 100px;
+}
+
+#examComponent-browserDiv {
+    width: 100%;
+    text-align: center;
+    height: 75px;
+}
+
+#examComponent-browserDiv-a {
+    color: #04635F;
+    word-spacing: 3px;
+    font-size: 22px;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+#examComponent-browserDiv-img {
+    height: 50px;
+    position: relative;
+    top: 17px;
+    left: 6px;
+}
+
+/* =========================================================================== */
+
+#examComponent-quizConfigDiv {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#examComponent-quizConfigDiv-a {
+    color: #04635F;
+    word-spacing: 3px;
+    font-size: 22px;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+/* ============================================================================ */
+
+.examComponent-quizDiv {
+    text-align: left;
+}
+
+.examComponent-quizDiv-quizes {
+    width: 60%;
+    margin: auto;
+    background-color: #777777;
+    padding: 10px;
+    margin-top: 1px;
+}
+
+.examComponent-quizDiv-quizes-a {
+    text-decoration: none;
+    font-size: large;
+    font-weight: 600;
+    color: white;
+}
+
+/* ==============================media queries====================================== */
+
+@media (min-width:0px) and (max-width:800px) {
+    .examComponent-quizDiv-quizes {
+        width: 80%;
+        transition-duration: 1s;
+    }
+    #examComponent-quizConfigDiv-a, #examComponent-browserDiv-a {
+        font-size: 20px;
+        transition-duration: 1s;
+    }
+}
+
+/* ================================THE END=========================================== */

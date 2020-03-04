@@ -1,0 +1,623 @@
+.president-wrapper{
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 2fr 0.2fr;
+    grid-column-gap: 3em;
+    grid-row-gap: 3em; 
+     width: 100vw; 
+      background-image: linear-gradient(90deg,#e6dada,#dfedf0);
+      transition-duration: 2s;
+    
+}
+.president-wrapper>div{
+    margin-top: 4em;
+     /* transition : width 2s, height 2s; */
+
+}
+.president-says{
+    font-family: sans-serif;
+    font-size: 18px;
+    justify-content: center;
+    text-align: left;
+    color: #2b2929;
+    line-height: 2;
+    transition-duration: 2s;
+
+}
+.apply-btn{
+text-decoration: none;
+}
+.apply-btn-div{
+    position: relative;
+    top: -25px;
+    left:450px;
+    width: 120px;
+    height: 50px;
+    border: 1px solid;
+    text-align: center;
+    margin: 3em;
+    font-size: smaller;
+    transition-duration: 2s;
+    text-decoration: none;
+
+    cursor: pointer;
+    /* background-color:springgreen; */
+    color: white;
+    border-radius: 5px;
+    line-height: 3;
+    padding:-13px 35px;
+    background-image: linear-gradient(270deg, rgb(8, 216, 141), rgb(14, 181, 163));
+    
+}
+
+.animation{
+    animation: div 3s infinite ;
+}
+.president{
+    width: 25vw;
+    height: 550px;
+    /* top:100px; */
+    margin-top: -10%;
+    margin-left: -10%;
+    transition-duration: 2s;
+
+}
+
+.pr{
+    font-size: 70px;
+    font-weight: 500;
+    text-align: left;
+    color: rgb(43, 41, 41);
+    transition-duration: 2s;
+  
+}
+.sub-heading{
+    font-size: 30px;
+    font-weight: 200;
+    text-align: left;
+    color: rgb(43, 41, 41);
+    transition-duration: 2s;
+    
+    line-height: 1;
+}
+.president-says{
+    line-height: 2;
+    font-size: 20px;
+    font-weight: 200;
+    text-align: left;
+    transition-duration: 2s;
+    color: rgb(43, 41, 41);   
+}
+
+ 
+                            @media (max-width:578px){
+                                .president-wrapper{
+                                    display: block;
+                                    transition-duration: 2s;
+
+                    
+                                }
+                                .president{
+                                    margin-top: 5px;
+                                    height: 235px;
+                                    margin-left: 17px;
+                                    transition-duration: 2s;
+
+                                }
+                                .main-president-div{
+                                    margin-top: 0px;
+                                    transition-duration: 2s;
+
+                                }
+                                .pr{
+                                    font-size: 35px;
+                                        transition-duration: 2s;
+                                        font-weight: 700;
+                                }
+                               .init{
+                                   margin-left: 25px;
+                                   transition-duration: 2s;
+                                   
+                                   
+                               }
+                               .president-heading{
+                                        transition-duration: 2s;
+                                        margin-top: -50px;
+
+                               }
+                               .sub-heading{
+                                font-size: 23px;
+                                font-weight: 200s;
+                                        transition-duration: 2s;
+                                        text-align: left;
+                                color: rgb(43, 41, 41);
+                                
+                               }
+                               .president-says{
+                                   font-size: 15px;
+                                        transition-duration: 2s;
+                                        line-height: 1;
+
+                               }
+                               .president-says-div{
+                                        transition-duration: 2s;
+                                        width: 450px;
+                               }
+                               .apply-btn-div{
+                                margin-left: -149px;
+                                width: 110px;
+                                height: 41px;
+                                padding: 10px 29px;
+                                transition-duration: 2s;
+                            
+                                margin-top: 46px;
+                               
+                               }
+
+                            }
+
+                            @media (min-width:579px) and (max-width:600px){
+                                .president-wrapper{
+                                    display: inline-block;
+                                   
+                                    transition-duration: 2s;
+                    
+                                }
+                                .president{
+                                    margin-top: 18px;
+                                    height: 235px;
+                                        transition-duration: 2s;
+                                        margin-left: 3px;
+                                }
+                                .main-president-div{
+                                    margin-top: 0px;
+                                    transition-duration: 2s;
+
+                                }
+                                .pr{
+                                        transition-duration: 2s;
+                                        font-size: 27px;
+                                    font-weight: 700;
+                                }
+                               .init{
+                                margin-left: 25px;
+                                /* display: inline; */
+                                        transition-duration: 2s;
+                                        width: 323px;
+                                display: block;
+                                margin-left: 186px;
+                                text-align: right;
+                                   
+                               }
+                               .president-heading{
+                                margin-top: -290px;
+                                        transition-duration: 2s;
+                                        text-align: left;
+                               }
+                               .sub-heading{
+                                font-size: 18px;
+                                font-weight: 200s;
+                                text-align: left;
+                                color: rgb(43, 41, 41);
+                                
+                               }
+                               .president-says{
+                                font-size: 13px;
+                                        transition-duration: 2s;
+                                        line-height: 2;
+
+                               }
+                               .president-says-div{
+                                   width: 350px;
+                               }
+                               .apply-btn-div{
+                                margin-left: -149px;
+                                width: 110px;
+                                height: 41px;
+                                padding: 10px 29px;
+                                        transition-duration: 2s;
+                                        top: -38px;
+                                left: 366px;
+                                margin-top: 46px;
+                               
+                               }
+
+                           }
+
+                           @media (min-width:601px) and (max-width:700px){
+                            .president-wrapper{
+                                display: inline-block;
+                                transition-duration: 2s;
+                               
+                
+                            }
+                            .president{
+                                margin-top: 18px;
+                                height: 250px;
+                                margin-left: 9px;
+                                transition-duration: 2s;
+
+                            }
+                            .main-president-div{
+                                margin-top: 0px;
+                                transition-duration: 2s;
+
+
+                            }
+                            .pr{
+                                font-size: 29px;
+                                font-weight: 700;
+                                transition-duration: 2s;
+
+                            }
+                           .init{
+                            margin-left: 25px;
+                            /* display: inline; */
+                            width: 323px;
+                            display: block;
+                            margin-left: 250px;
+                            text-align: right;
+                            transition-duration: 2s;
+                               
+                           }
+                           .president-heading{
+                            margin-top: -290px;
+                            text-align: left;
+                            transition-duration: 2s;
+
+                           }
+                           .sub-heading{
+                            font-size: 19px;
+                            font-weight: 200s;
+                            text-align: left;
+                            color: rgb(43, 41, 41);
+                            transition-duration: 2s;
+
+                            
+                           }
+                           .president-says{
+                            font-size: 14px;
+                            line-height: 2.5;
+                            transition-duration: 2s;
+
+                           }
+                           .president-says-div{
+                            transition-duration: 2s;
+                            width: 370px;
+                           }
+                           .apply-btn-div{
+                            margin-left: -149px;
+                            width: 110px;
+                            height: 41px;
+                            padding: 10px 29px;
+                            top: -38px;
+                            left: 366px;
+                                transition-duration: 2s;
+                                margin-top: 46px;
+                           
+                           }
+
+
+                           }
+
+                           @media (min-width:701px) and (max-width:796px){
+                            .president-wrapper{
+                                display: inline-block;
+                                transition-duration: 2s;
+                               
+                
+                            }
+                            .president{
+                                margin-top: 84px;
+                                height: 273px;
+                                margin-left: 12px;
+                                -webkit-transition-duration: 2s;
+                                transition-duration: 2s;;
+
+                            }
+                            .main-president-div{
+                                margin-top: 0px;
+                                transition-duration: 2s;
+
+
+                            }
+                            .pr{
+                                font-size: 33px;
+                                font-weight: 700;
+                                transition-duration: 2s;
+
+                            }
+                           .init{
+                            margin-left: 25px;
+                            /* display: inline; */
+                            width: 323px;
+                            display: block;
+                            margin-left: 270px;
+                            text-align: right;
+                            transition-duration: 2s;
+                               
+                           }
+                           .president-heading{
+                            margin-top: -330px;
+                            text-align: left;
+                            transition-duration: 2s;
+
+                           }
+                           .sub-heading{
+                            font-size: 19px;
+                            font-weight: 200s;
+                            text-align: left;
+                            color: rgb(43, 41, 41);
+                            transition-duration: 2s;
+
+                            
+                           }
+                           .president-says{
+                            font-size: 14px;
+                            line-height: 2.5;
+                            transition-duration: 2s;
+
+                           }
+                           .president-says-div{
+                            transition-duration: 2s;
+                            width: 400px;
+                           }
+                           .apply-btn-div{
+                            margin-left: -149px;
+                            width: 110px;
+                            height: 41px;
+                            padding: 10px 29px;
+                            top: -38px;
+                            left: 366px;
+                                transition-duration: 2s;
+                                margin-top: 46px;
+                           
+                           }
+                           
+                        }
+
+                           @media (min-width:797px) and (max-width:850px){
+                            .president-wrapper{
+                                display: inline-block;
+                                transition-duration: 2s;
+                               
+                
+                            }
+                            .president{
+                                margin-top: 30px; 
+                                height: 310px;
+                                margin-left: 17px;
+                                -webkit-transition-duration: 2s;
+                                transition-duration: 2s;
+                                width: 208px;
+   
+
+                            }
+                            .main-president-div{
+                                margin-top: 0px;
+                                transition-duration: 2s;
+
+
+                            }
+                            .pr{
+                                font-size: 40px;
+                                font-weight: 700;
+                                transition-duration: 2s;
+
+                            }
+                           .init{
+                            margin-left: 25px;
+                            /* display: inline; */
+                            width: 323px;
+                            display: block;
+                            margin-left: 270px;
+                            text-align: right;
+                            transition-duration: 2s;
+                               
+                           }
+                           .president-heading{
+                            margin-top: -370px;
+                            text-align: left;
+                            width: 500px;
+                            transition-duration: 2s;
+
+                           }
+                           .sub-heading{
+                            font-size: 25px;
+                            font-weight: 200s;
+                            width: 500px;
+                            text-align: left;
+                            color: rgb(43, 41, 41);
+                            transition-duration: 2s;
+
+                            
+                           }
+                           .president-says{
+                            font-size: 14px;
+                            line-height: 2;
+                            transition-duration: 2s;
+
+                           }
+                           .president-says-div{
+                            transition-duration: 2s;
+                            width: 530px;
+                           }
+                           .apply-btn-div{
+                            margin-left: -69px;
+                            width: 110px;
+                            height: 41px;
+                            padding: 10px 29px;
+                            top: -51px;
+                            left: 366px;
+                            transition-duration: 2s;
+                            margin-top: 46px;
+                           
+                           }
+                               }
+                   
+                               @media (min-width:851px) and (max-width:1000px){
+                        
+                                .president-wrapper{
+                                    display: inline-block;
+                                    transition-duration: 2s;
+                                   
+                    
+                                }
+                                .president{
+                                    margin-top: 9px;
+    height: 410px;
+    margin-left: 17px;
+    -webkit-transition-duration: 2s;
+    transition-duration: 2s;
+    width: 244px;
+                                    
+       
+    
+                                }
+                                .main-president-div{
+                                    margin-top: 0px;
+                                    transition-duration: 2s;
+    
+    
+                                }
+                                .pr{
+                                    font-size: 44px;
+                                    font-weight: 700;
+                                    transition-duration: 2s;;
+                                    letter-spacing: 1px;
+    
+                                }
+                               .init{
+                                
+                    
+                                width: 323px;
+                                display: block;
+                                margin-left: 370px;
+                                text-align: right;
+                                transition-duration: 2s;
+                                   
+                               }
+                               .president-heading{
+                                margin-top: -450px;
+                                text-align: left;
+                                width: 500px;
+                                transition-duration: 2s;
+    
+                               }
+                               .sub-heading{
+                                font-size: 27px;
+                                font-weight: 200s;
+                                width: 500px;
+                                text-align: left;
+                                color: rgb(43, 41, 41);
+                                transition-duration: 2s;
+    
+                                
+                               }
+                               .president-says{
+                                font-size: 18px;
+                                line-height: 2;
+                                transition-duration: 2s;
+    
+                               }
+                               .president-says-div{
+                                transition-duration: 2s;
+                                width: 530px;
+                               }
+                               .apply-btn-div{   
+                                    width: 110px;
+                                height: 44px;
+                                padding: 10px 29px;
+                                top: -44px;
+                                left: 366px;
+                                -webkit-transition-duration: 2s;
+                                transition-duration: 2s;
+                                margin-top: 46px;
+                               
+                               }
+                                
+                            
+                            }
+
+                                       @media (min-width:1001px) and (max-width:1150px){
+                                        .president-wrapper{
+                                            display: inline-block;
+                                            transition-duration: 2s;
+                                           
+                            
+                                        }
+                                        .president{
+                                            margin-top: 9px;
+    height: 436px;
+    margin-left: 24px;
+    -webkit-transition-duration: 2s;
+    transition-duration: 2s;
+    width: 270px;
+                         
+                                            
+               
+            
+                                        }
+                                        .main-president-div{
+                                            margin-top: 0px;
+                                            transition-duration: 2s;
+            
+            
+                                        }
+                                        .pr{
+                                            font-size: 44px;
+                                            font-weight: 700;
+                                            transition-duration: 2s;;
+                                            letter-spacing: 1px;
+            
+                                        }
+                                       .init{
+                                        
+                            
+                                        width: 323px;
+                                        display: block;
+                                        margin-left: 400px;
+                                        text-align: right;
+                                        transition-duration: 2s;
+                                           
+                                       }
+                                       .president-heading{
+                                        margin-top: -480px;
+                                        text-align: left;
+                                        width: 550px;
+                                        transition-duration: 2s;
+            
+                                       }
+                                       .sub-heading{
+                                        font-size: 27px;
+                                        font-weight: 200s;
+                                        width: 550px;
+                                        text-align: left;
+                                        color: rgb(43, 41, 41);
+                                        transition-duration: 2s;
+            
+                                        
+                                       }
+                                       .president-says{
+                                        font-size: 18px;
+                                        line-height: 2;
+                                        transition-duration: 2s;
+            
+                                       }
+                                       .president-says-div{
+                                        transition-duration: 2s;
+                                        width: 600px;
+                                       }
+                                       .apply-btn-div{   
+                                        width: 123px;
+    height: 44px;
+    padding: 10px 29px;
+    top: -28px;
+    left: 378px;
+                                        -webkit-transition-duration: 2s;
+                                        transition-duration: 2s;
+                                        margin-top: 46px;
+                                       
+                                       }
+                                        
+                                    
+                            }

@@ -1,0 +1,63 @@
+.myNavbar .myContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    background-image: -webkit-linear-gradient(right,#08383d,#01645f);
+    background-image: linear-gradient(270deg,#08383d,#01645f);
+    position: fixed;
+    z-index: 111112;
+    top: 0;
+    box-shadow: 0 0 9px rgba(0,0,0,.65);
+}
+
+.nav-flex-1.img {
+    height: 180px;
+    margin-right: 10px;
+    margin-top: 60px;
+    min-width: 10px;
+}
+
+.myContainer {
+    width: 100%;
+    background-color: #51d98d;
+    color: white    ;
+}
+
+#myImg{
+    width: 150px;
+    height: 100px;                 
+    margin-left : 0px;
+    margin-top: 10px;
+    
+
+}
+#myImg2{
+    width: 50px;
+    height: 30px;   
+    display: hide;              
+
+                      
+
+}
+.mainDiv{
+  position: relative;
+  /* top:-20px;  */
+  color: white;
+/* animation: nav 3s infinite; */
+/* display:none  */
+/* transition: cubic-bezier(); */
+transition: top 1s linear 1s  ;
+/* transition-timing-function: cubic-bezier(.68,-.55,.265,1.55); */
+
+}
+.change{
+  top:0px;
+}
+
+.ty{
+
+    color:white
+}
