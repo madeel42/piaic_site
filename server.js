@@ -1,5 +1,6 @@
 const express = require('express');
 const connectDB = require('./config/db');
+const fileUpload = require('express-fileupload')
 const bodyParser = require('body-parser')
 const app = express();
 
@@ -8,6 +9,7 @@ connectDB();
 
 
 app.use(express.json({ extended: false }));
+app.use(fileUpload());
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))

@@ -48,3 +48,22 @@ export const createProfile = (formData, edit = false, history) => async dispatch
     }
 
 }
+export const profileRegister = ({ name, city, gender, program }) => async dispatch => {
+
+    const body = { name, city, gender, program };
+    try {
+        const res = await axios.post('/api/profile', body)
+        dispatch({
+            type: 'REGISTER_SUCCESS',
+            payload: res.data
+        });
+        // dispatch(loadUser());
+    } catch (err) {
+        console.log(err.message)
+        dispatch({
+            type: 'REGISTER_FAIL'
+        });
+
+    }
+
+}

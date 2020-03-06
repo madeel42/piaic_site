@@ -19,6 +19,7 @@ import myStore from './store'
 import setAuthToken from './utils/setAuthToken'
 import { loadUser } from './actions/auth'
 import CreateProfile from './StudentPortal/DashBoard/userProfile/CreateProfle'
+import UserProfile from './StudentPortal/DashBoard/userProfile/userProfile'
 
 
 
@@ -42,7 +43,7 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={Home} />
           <PrivateRoute exact path='/create-profile' component={CreateProfile} />
-          <PrivateRoute exact path='/dashboard' component={Dashboard} />
+          <PrivateRoute exact path='/dashboard' component={UserProfile} />
           <Route exact path="/payment" component={Payment} />
           <Route exact path="/paymenthistory" component={PaymentHistory} />
           <Route exact path="/paymentbranches" component={PaymentBranches} />

@@ -25,21 +25,33 @@ router.get('/me', auth, async (req, res) => {
 });
 
 // creating user Profile
-router.post('/', [auth, [
-    check('name', 'Name is Required').not().isEmpty(),
-    check('program', 'Enter the Program ').not().isEmpty()
-]], async (req, res) => {
+router.post('/', auth, async (req, res) => {
 
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() });
     }
-    const { name, program } = req.body;
+    // if (req.files === null) {
+    //     return res.status(400).json({ msg: 'PLease Uplaod Picture' })
+    // }
+    // const file = req.files.file
+    // file.mv(`${__dirname}/client/public/uploads/${file.name}`, err => {
+    //     if (err) {
+    //         console.error(err);
+    //         return res.status(500).send(err);
+    //     }
+    //     res.json({ fileName: file.name, filePath: `uploads/${file.name}` })
+    // })
+    const { name, city, gender, program, picture } = req.body;
     //Build Profile Object
     const profileFields = {};
     profileFields.user = req.user.id;
     if (name) profileFields.name = name;
     if (program) profileFields.program = program;
+    if (picture) profileFields.picture = picture;
+    if (city) profileFields.city = city;
+    if (gender) profileFields.gender = gender
+
 
     try {
         // let profile = await Profile.findOne({ user: req.user.id });
@@ -122,6 +134,7 @@ router.delete('/', auth, async (req, res) => {
 
     }
 });
+
 
 
 module.exports = router;    

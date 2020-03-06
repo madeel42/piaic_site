@@ -126,4 +126,5 @@ float: right;
     /* margin: auto; */
     top: 14%;
     text-align: justify;
+    z-index: -1;
 }

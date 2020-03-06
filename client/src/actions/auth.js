@@ -51,9 +51,10 @@ export const register = ({ cnic, email, password }) => async dispatch => {
         });
 
     }
+   
+    }
 
 
-}
 
 // Login the user
 

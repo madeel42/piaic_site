@@ -74,7 +74,7 @@ function MenuAppBar(props) {
 
 
             <Drawer getInfo={props.getInfo} onClose={closeDrawer()}></Drawer>
-            <UserProfile/>
+            {/* <UserProfile/> */}
 
         </div>
     );
