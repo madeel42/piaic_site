@@ -17,7 +17,7 @@ export const loadUser = () => async dispatch => {
         })
 
     } catch (error) {
-        alert("Please Login!");
+      
         if (error) dispatch({
             type: 'AUTH_ERROR',
         })

@@ -27,7 +27,7 @@ router.get('/me', auth, async (req, res) => {
 // creating user Profile
 router.post('/', auth, async (req, res) => {
 
-    const errors = validationResult(req);
+    const errors = validationResult(req).body;
     if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() });
     }
@@ -48,7 +48,7 @@ router.post('/', auth, async (req, res) => {
     profileFields.user = req.user.id;
     if (name) profileFields.name = name;
     if (program) profileFields.program = program;
-    if (picture) profileFields.picture = picture;
+    // if (picture) profileFields.picture = picture;
     if (city) profileFields.city = city;
     if (gender) profileFields.gender = gender
 

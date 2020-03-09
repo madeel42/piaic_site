@@ -7,11 +7,19 @@ const ProfileSchema = new mongoose.Schema({
     },
     name: {
         type: String,
-        required: true
+
+    },
+    city: {
+        type: String,
+
+    },
+    gender: {
+        type: String,
+
     },
     program: {
         type: String,
-        required: true
+
     },
     date: {
         type: Date,

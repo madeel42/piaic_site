@@ -1,11 +1,13 @@
-import React, { Fragment } from 'react'
-import Spinner from './spinner.gif';
+import React from 'react';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
-export default function () {
-    return <Fragment>
-        <img src={Spinner}
-
-            style={{ width: '200px', margin: 'auto', display: 'block' }}
-            alt='Loading...' />
-    </Fragment>
-};
+export default function CircularUnderLoad() {
+  return <CircularProgress  style={{
+      position:'fixed',
+    //   margin:'auto',
+    marginLeft:'-5%',
+    width:'50px',
+      marginTop:'20%',
+      marginBottom:'20%'
+  }} disableShrink />;
+}

@@ -30,10 +30,7 @@ const useStyles = makeStyles(theme => ({
 
 const UserProfile = ({ auth: { user }, profile: { loading, profile }, getCurrentProfile, profileRegister }) => {
     const classes = useStyles();
-    const [formData, setFormData] = useState({
-        name: ''
-
-    });
+    const [formData, setFormData] = useState({name: ''});
     const [currentcity, setcity] = useState({ city: '' })
     const [currentGender, setGender] = useState({ gender: '' })
     const [currentProgram, setProgram] = useState({ program: '' })
@@ -52,12 +49,13 @@ const UserProfile = ({ auth: { user }, profile: { loading, profile }, getCurrent
 
     }
     const changeHandlerProgram = (e) => {
-        setProgram({ ...currentGender, program: e.target.value })
+        setProgram({ ...currentProgram, program: e.target.value })
     }
     const onSubmit = e => {
         e.preventDefault();
-        console.log(formData)
-        profileRegister({ city, gender, program })
+        console.log(formData, currentGender
+            , currentcity, currentProgram)
+        profileRegister({  city, gender, program })
         // if (!cnic || !email || !password) {
         //     //    props.setAlert("Full Information is Required For Registeraton", "danger")
         // }
@@ -80,7 +78,9 @@ const UserProfile = ({ auth: { user }, profile: { loading, profile }, getCurrent
                 <i></i>Welcome {user && user.email}
             </p>
 
-            {profile !== null ? <Fragment>Has</Fragment> :
+            {profile !== null ? <Fragment>Has
+            <div>{profile.name} is new name</div>
+            </Fragment> :
                 <Fragment>
                     <p>You haven't set up your Profile, make a Profile</p>
 
@@ -92,7 +92,9 @@ const UserProfile = ({ auth: { user }, profile: { loading, profile }, getCurrent
                             <Container maxWidth="lg">
                                 {/* <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '100vh' }} /> */}
                                 <TextField required id="standard-required" label="Enter Your Name" variant="outlined"
-                                    placeholder="Name" />
+                                    placeholder="Name"
+                                    onChange={changeHandler}
+                                />
                                 <br />
                                 <FormControl variant="filled" className={classes.formControl} >
                                     <InputLabel id="demo-simple-select-filled-label">City</InputLabel>

@@ -3,7 +3,7 @@
 const initialState = {
     profile: null,
     profiles: [],
-    loading: true,
+    loading: true,  
     error: {}
 }
 

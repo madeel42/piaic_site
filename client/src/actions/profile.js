@@ -61,7 +61,7 @@ export const profileRegister = ({ name, city, gender, program }) => async dispat
     } catch (err) {
         console.log(err.message)
         dispatch({
-            type: 'REGISTER_FAIL'
+            type: 'REGISTER_FAILA'
         });
 
     }
