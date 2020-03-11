@@ -5,7 +5,7 @@ const ProfileSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'user'
     },
-    name: {
+    userName: {
         type: String,
 
     },
@@ -20,6 +20,9 @@ const ProfileSchema = new mongoose.Schema({
     program: {
         type: String,
 
+    },
+    image: {
+        type: String
     },
     date: {
         type: Date,

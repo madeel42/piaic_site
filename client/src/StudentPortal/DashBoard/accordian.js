@@ -6,6 +6,9 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import InfoIcon from '@material-ui/icons/Info';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -17,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export default function SimpleExpansionPanel() {
+const SimpleExpansionPanel = ({ auth: { user }, profile: { loading, profile } }) => {
     const classes = useStyles();
 
     return (
@@ -49,3 +52,15 @@ export default function SimpleExpansionPanel() {
         </div>
     );
 }
+SimpleExpansionPanel.propTypes = {
+    auth: PropTypes.object.isRequired,
+    profile: PropTypes.object.isRequired,
+
+}
+const mapStateToProps = state => ({
+    auth: state.auth,
+    profile: state.ProfileReducer
+
+})
+
+export default connect(mapStateToProps)(SimpleExpansionPanel)

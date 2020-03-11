@@ -5,7 +5,9 @@ import TextField from '@material-ui/core/TextField';
 import { connect } from 'react-redux';
 import { getCurrentProfile } from '../../../actions/profile'
 import Button from '@material-ui/core/Button';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+
 import Container from '@material-ui/core/Container';
 import './userProfile.css'
 import DashNav from '../DashNav/dashNav'
@@ -13,7 +15,6 @@ import Spinner from './spinner'
 import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
-import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import { profileRegister } from '../../../actions/profile'
@@ -26,40 +27,94 @@ const useStyles = makeStyles(theme => ({
     selectEmpty: {
         marginTop: theme.spacing(2),
     },
+    root: {
+        '& > *': {
+            margin: theme.spacing(1),
+        },
+        ...theme.typography.button,
+        backgroundColor: theme.palette.background.paper,
+        padding: theme.spacing(1),
+    },
+    input: {
+        display: 'none',
+    },
 }));
+
+const theme = createMuiTheme();
+
+theme.typography.h3 = {
+    fontSize: '1.2rem',
+    '@media (min-width:600px)': {
+        fontSize: '1.5rem',
+    },
+    [theme.breakpoints.up('md')]: {
+        fontSize: '2rem',
+    },
+};
+
+// base64 code 
+
+
+function toDataURL(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.onload = function () {
+        var reader = new FileReader();
+        reader.onloadend = function () {
+            callback(reader.result);
+        }
+        reader.readAsDataURL(xhr.response);
+    };
+    xhr.open('GET', url);
+    xhr.responseType = 'blob';
+    xhr.send();
+}
+
+
 
 const UserProfile = ({ auth: { user }, profile: { loading, profile }, getCurrentProfile, profileRegister }) => {
     const classes = useStyles();
-    const [formData, setFormData] = useState({name: ''});
-    const [currentcity, setcity] = useState({ city: '' })
-    const [currentGender, setGender] = useState({ gender: '' })
-    const [currentProgram, setProgram] = useState({ program: '' })
-    // const { name, city, gender, program } = formData;
+    const [formData, setFormData] = useState({
+        userName: '',
+        city: '',
+        gender: '',
+        program: '',
+        image: ''
+    });
+
+    const onChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value })
+    }
+    // const changeHandlerCity = (e) => {
+    //     setcity({ ...currentcity, city: e.target.value })
+    // }
+    // const changeHandlerGender = (e) => {
+    //     setGender({ ...currentGender, gender: e.target.value })
+
+    // }
+    // const changeHandlerProgram = (e) => {
+    //     setProgram({ ...currentProgram, program: e.target.value })
+    // }
+    const changeFileHandle = (e) => {
+        const objectURL = URL.createObjectURL(e.target.files[0])
+        setFormData({ ...formData, image: objectURL })
+
+    }
+    toDataURL(formData.image, function (dataUrl) {
+        // console.log('RESULT:', dataUrl)
+    })
 
 
-    // const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
-    const changeHandler = (e) => {
-        setFormData({ ...formData, name: e.target.value })
-    }
-    const changeHandlerCity = (e) => {
-        setcity({ ...currentcity, city: e.target.value })
-    }
-    const changeHandlerGender = (e) => {
-        setGender({ ...currentGender, gender: e.target.value })
-
-    }
-    const changeHandlerProgram = (e) => {
-        setProgram({ ...currentProgram, program: e.target.value })
-    }
     const onSubmit = e => {
         e.preventDefault();
-        console.log(formData, currentGender
-            , currentcity, currentProgram)
-        profileRegister({  city, gender, program })
-        // if (!cnic || !email || !password) {
-        //     //    props.setAlert("Full Information is Required For Registeraton", "danger")
-        // }
+        console.log(formData)
+        // const { userName, city, gender, program, image } = formData;
+        profileRegister(formData)
     }
+
+    // const [img, setImg] = useState({
+    //     image: ''
+    // })
+
 
     useEffect(() => {
         getCurrentProfile();
@@ -74,26 +129,31 @@ const UserProfile = ({ auth: { user }, profile: { loading, profile }, getCurrent
 
         <div className='profile-creation-alert'>
 
-            <p className='lead'>
-                <i></i>Welcome {user && user.email}
-            </p>
 
-            {profile !== null ? <Fragment>Has
-            <div>{profile.name} is new name</div>
+            <ThemeProvider theme={theme}>
+                <Typography variant="h3">
+                    Welcome {profile && profile.userName}
+
+                </Typography>
+            </ThemeProvider>
+
+
+            {profile !== null ? <Fragment>
+                <div>You Have Created Your Profile !</div>
             </Fragment> :
                 <Fragment>
                     <p>You haven't set up your Profile, make a Profile</p>
 
-                    <Button variant="contained" size="large" color="primary" >
-                        Create Profile
-                         </Button>
+                    <div className={classes.root}>{"Fill Up the Form To create your Profile"}</div>
                     <form onSubmit={e => onSubmit(e)}>
                         <div className='Profile-Container'>
                             <Container maxWidth="lg">
                                 {/* <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '100vh' }} /> */}
                                 <TextField required id="standard-required" label="Enter Your Name" variant="outlined"
                                     placeholder="Name"
-                                    onChange={changeHandler}
+                                    name="userName"
+                                    value={formData.userName}
+                                    onChange={e => onChange(e)}
                                 />
                                 <br />
                                 <FormControl variant="filled" className={classes.formControl} >
@@ -101,9 +161,9 @@ const UserProfile = ({ auth: { user }, profile: { loading, profile }, getCurrent
                                     <Select
                                         labelId="demo-simple-select-filled-label"
                                         id="demo-simple-select-filled"
-                                        value={currentcity.city}
-
-                                        onChange={changeHandlerCity}
+                                        name="city"
+                                        value={formData.city}
+                                        onChange={e => onChange(e)}
                                     >
                                         <MenuItem value="">
                                             <em>None</em>
@@ -119,15 +179,16 @@ const UserProfile = ({ auth: { user }, profile: { loading, profile }, getCurrent
                                     <Select
                                         labelId="demo-simple-select-filled-label"
                                         id="demo-simple-select-filled"
-                                        value={currentGender.gender}
-                                        onChange={changeHandlerGender}
+                                        name="gender"
+                                        value={formData.gender}
+                                        onChange={e => onChange(e)}
 
                                     >
                                         <MenuItem value="">
                                             <em>None</em>
                                         </MenuItem>
                                         {gender.map((gen) => (
-                                            <MenuItem value={gen}>{gen}</MenuItem>
+                                            <MenuItem name='gen' value={gen}>{gen}</MenuItem>
                                         ))}
 
                                     </Select>
@@ -137,8 +198,9 @@ const UserProfile = ({ auth: { user }, profile: { loading, profile }, getCurrent
                                     <Select
                                         labelId="demo-simple-select-filled-label"
                                         id="demo-simple-select-filled"
-                                        value={currentProgram.program}
-                                        onChange={changeHandlerProgram}
+                                        name="program"
+                                        value={formData.program}
+                                        onChange={e => onChange(e)}
 
                                     >
                                         <MenuItem value="">
@@ -151,7 +213,26 @@ const UserProfile = ({ auth: { user }, profile: { loading, profile }, getCurrent
 
 
                                     </Select>
+                                    <br />
+                                    {/* <UploadBtn id='uploadbtn'/> */}
+                                    <div className={classes.root}>
+                                        <input
+                                            accept="image/*"
+                                            className={classes.input}
+                                            id="contained-button-file"
+                                            multiple
+                                            type="file"
+                                            onChange={changeFileHandle}
+
+                                        />
+                                        <label htmlFor="contained-button-file">
+                                            <Button variant="contained" color="primary" component="span" >
+                                                Upload
+        </Button>
+                                        </label>
+                                    </div>
                                 </FormControl>
+
                                 <Button variant="contained" size="large" color="danger" type='submit' >
                                     Create
                          </Button>

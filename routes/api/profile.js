@@ -27,10 +27,7 @@ router.get('/me', auth, async (req, res) => {
 // creating user Profile
 router.post('/', auth, async (req, res) => {
 
-    const errors = validationResult(req).body;
-    if (!errors.isEmpty()) {
-        return res.status(400).json({ errors: errors.array() });
-    }
+    
     // if (req.files === null) {
     //     return res.status(400).json({ msg: 'PLease Uplaod Picture' })
     // }
@@ -42,13 +39,13 @@ router.post('/', auth, async (req, res) => {
     //     }
     //     res.json({ fileName: file.name, filePath: `uploads/${file.name}` })
     // })
-    const { name, city, gender, program, picture } = req.body;
+    const { userName, city, gender, program, image } = req.body;
     //Build Profile Object
     const profileFields = {};
     profileFields.user = req.user.id;
-    if (name) profileFields.name = name;
+    if (userName) profileFields.userName = userName;
     if (program) profileFields.program = program;
-    // if (picture) profileFields.picture = picture;
+    if (image) profileFields.image = image;
     if (city) profileFields.city = city;
     if (gender) profileFields.gender = gender
 
