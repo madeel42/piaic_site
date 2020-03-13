@@ -36,7 +36,54 @@ const SimpleExpansionPanel = ({ auth: { user }, profile: { loading, profile } })
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
                     <Typography>
-                        <div id="upperDiv">
+                        <table>
+                            <tr>
+                                <th className='profile-info-headers'>
+                                    Name
+                                </th>
+                                <th className='profile-info-user'>
+                                    {profile.userName}
+                                </th>
+                            </tr>
+                            <tr>
+                                <th className='profile-info-headers'>
+                                    S/O
+                                </th>
+                                <th className='profile-info-user'>
+                                    {profile.userName}
+                                </th>
+                            </tr><tr>
+                                <th className='profile-info-headers'>
+                                    Roll No
+                                </th>
+                                <th className='profile-info-user'>
+                                    {profile.userName}
+                                </th>
+                            </tr><tr>
+                                <th className='profile-info-headers'>
+                                    Gender
+                                </th>
+                                <th className='profile-info-user'>
+                                    {profile.gender}
+                                </th>
+                            </tr><tr>
+                                <th className='profile-info-headers'>
+                                    Program
+                                </th>
+                                <th className='profile-info-user'>
+                                    {profile.program}
+                                </th>
+                            </tr>
+                            <tr>
+                                <th className='profile-info-headers'>
+                                    Email
+                                </th>
+                                <th className='profile-info-user'>
+                                    {user.email}
+                                </th>
+                            </tr>
+                        </table>
+                        {/* <div id="upperDiv">
                             <div id="options-info">
                                 <span className="span">Name</span>
                                 <span className="span">S/O</span>
@@ -45,7 +92,15 @@ const SimpleExpansionPanel = ({ auth: { user }, profile: { loading, profile } })
                                 <span className="span">Gender</span>
                                 <span className="span">Email</span>
                             </div>
-                        </div>
+                            <div id="options-info2">
+                                <span className="span">{profile.userName}</span>
+                                <span className="span">Not Available</span>
+                                <span className="span">Not Available</span>
+                                <span className="span">{profile.city}</span>
+                                <span className="span">{profile.gender}</span>
+                                <span className="span">{user.email}</span>
+                            </div>
+                        </div> */}
                     </Typography>
                 </ExpansionPanelDetails>
             </ExpansionPanel>

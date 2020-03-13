@@ -1,5 +1,6 @@
 
 import axios from 'axios';
+import { loadUser } from './auth'
 
 
 // gET The currrent user profile
@@ -26,7 +27,7 @@ export const createProfile = (formData, edit = false, history) => async dispatch
                 'Content-Type': 'application/json'
             }
         }
-        const res = await axios('api/profile', config, formData)
+        const res = await axios.get('api/profile', config, formData)
         dispatch({
             type: 'GET_PROFILE',
             payload: res.data
@@ -38,9 +39,9 @@ export const createProfile = (formData, edit = false, history) => async dispatch
 
 
     } catch (err) {
-        
-          console.error(err.message)
-        
+
+        console.error(err.message)
+
         dispatch({
             type: 'PROFILE_ERROR',
             payload: { msg: err.response.statusText, status: err.response.status }
@@ -48,16 +49,22 @@ export const createProfile = (formData, edit = false, history) => async dispatch
     }
 
 }
-export const profileRegister = ({ userName, city, gender, program ,image}) => async dispatch => {
+export const profileRegister = ({ userName, city, gender, program, image }) => async dispatch => {
 
-    const body = { userName, city, gender, program,image };
+    const body = { userName, city, gender, program, image };
     try {
-        const res = await axios.post('/api/profile', body)
+        let fd = new FormData();
+
+        for (var item in body) {
+            fd.append(item, body[item]);
+        }
+        const res = await axios.post('/api/profile', fd)
         dispatch({
-            type: 'REGISTER_SUCCESS',
+            type: 'PROFILE_CREATED',
             payload: res.data
         });
-        // dispatch(loadUser());
+
+        dispatch(loadUser());
     } catch (err) {
         console.log(err.message)
         dispatch({

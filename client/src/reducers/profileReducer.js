@@ -1,9 +1,8 @@
 
 
 const initialState = {
-    profile: null,
-    profiles: [],
-    loading: true,  
+    profile: {},
+    loading: true,
     error: {}
 }
 
@@ -24,15 +23,19 @@ export default function (state = initialState, action) {
                 loading: false
             }
         case 'CLEAR_PROFILE':
-            return{
+            return {
                 ...state,
-                profile:null,
-                repos:[],
-                loading:false
+                profile: {},
+                repos: [],
+                loading: false
             }
-    
+        case "PROFILE_CREATED":
+            return {
+                ...state,
+                profile: payload
+            }
 
-                
+
         default:
             return state;
 

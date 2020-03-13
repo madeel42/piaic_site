@@ -136,22 +136,26 @@ export default function PrimarySearchAppBar() {
             onClose={handleMobileMenuClose}
         >
             <MenuItem>
-                <Typography>Apply</Typography>
+                <Link to='/signup' className='link' style={{
+                    color: 'black',
+                    fontFamily: 'sans-serif'
+                }}><Typography>Apply</Typography></Link>
             </MenuItem>
-            <MenuItem>
-                <Typography>Watch</Typography>
-            </MenuItem>
-            <MenuItem onClick={handleProfileMenuOpen}>
-                <IconButton
-                    aria-label="account of current user"
-                    aria-controls="primary-search-account-menu"
-                    aria-haspopup="true"
-                    color="inherit"
-                >
-                    <AccountCircle />
-                </IconButton>
-                <p>Profile</p>
-            </MenuItem>
+            <Link to='/dashboard' className='link' style={{
+                color: 'black',
+                fontFamily: 'sans-serif'
+            }}>
+                <MenuItem onClick={handleProfileMenuOpen}>
+                    <IconButton
+                        aria-label="account of current user"
+                        aria-controls="primary-search-account-menu"
+                        aria-haspopup="true"
+                        color="inherit"
+                    >
+                        <AccountCircle />
+                    </IconButton>
+                    <p>Profile</p>
+                </MenuItem></Link>
         </Menu>
     );
     const change = () => {
@@ -186,7 +190,7 @@ export default function PrimarySearchAppBar() {
                             position: 'absolute',
                             top: '10px',
                             left: '30px',
-                            cursor:'pointer'
+                            cursor: 'pointer'
                         }} />
                     </div>
                 </Link>
@@ -197,20 +201,20 @@ export default function PrimarySearchAppBar() {
                     <div className={classes.sectionDesktop}>
                         <IconButton aria-label="show 17 new notifications" color="inherit">
                             <Badge color="secondary">
-                               <Link to='/signup'><Typography className='ty '>Apply</Typography></Link> 
+                                <Link to='/signup'><Typography className='ty '>Apply</Typography></Link>
                             </Badge>
                         </IconButton>
                         <IconButton aria-label="show 17 new notifications" color="inherit" onClick={change()}>
                             <Badge color="secondary">
                                 <Typography className='ty'>Results</Typography>
                             </Badge>
-                            
+
                         </IconButton>
                         <IconButton aria-label="show 17 new notifications" color="inherit" onClick={change()}>
                             <Badge color="secondary">
-                               <Link to='/wit'><Typography className='ty'>WIT</Typography></Link> 
+                                <Link to='/wit'><Typography className='ty'>WIT</Typography></Link>
                             </Badge>
-                            
+
                         </IconButton>
                         <IconButton
                             edge="end"

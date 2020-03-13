@@ -96,7 +96,7 @@
 float: right;
     /* position: fixed; */
 }
-@media(min-width:500px) and (max-width:600px){
+@media (max-width:600px){
     .student-portal-text{
      display: none;
      transition-duration: 2s;
@@ -127,4 +127,24 @@ float: right;
     top: 14%;
     text-align: justify;
     z-index: -1;
+}
+.student-portal-profile-logo-div-img{
+    border-radius: 100px;
+    width: 40px;
+}
+.slideBar-image>img{
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    margin: auto;
+    border-radius: 50%;
+    border: 3px solid #00645f;
+
+}
+.slideBar-image{
+    margin-top: 26px;
+    display: flex;
+    margin-bottom: -100px;
 }

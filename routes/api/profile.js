@@ -27,18 +27,6 @@ router.get('/me', auth, async (req, res) => {
 // creating user Profile
 router.post('/', auth, async (req, res) => {
 
-    
-    // if (req.files === null) {
-    //     return res.status(400).json({ msg: 'PLease Uplaod Picture' })
-    // }
-    // const file = req.files.file
-    // file.mv(`${__dirname}/client/public/uploads/${file.name}`, err => {
-    //     if (err) {
-    //         console.error(err);
-    //         return res.status(500).send(err);
-    //     }
-    //     res.json({ fileName: file.name, filePath: `uploads/${file.name}` })
-    // })
     const { userName, city, gender, program, image } = req.body;
     //Build Profile Object
     const profileFields = {};

@@ -7,7 +7,7 @@ import { getCurrentProfile } from '../../../actions/profile'
 import Button from '@material-ui/core/Button';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-
+import{loadUser} from '../../../actions/auth'
 import Container from '@material-ui/core/Container';
 import './userProfile.css'
 import DashNav from '../DashNav/dashNav'
@@ -60,6 +60,7 @@ function toDataURL(url, callback) {
     xhr.onload = function () {
         var reader = new FileReader();
         reader.onloadend = function () {
+
             callback(reader.result);
         }
         reader.readAsDataURL(xhr.response);
@@ -84,40 +85,31 @@ const UserProfile = ({ auth: { user }, profile: { loading, profile }, getCurrent
     const onChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value })
     }
-    // const changeHandlerCity = (e) => {
-    //     setcity({ ...currentcity, city: e.target.value })
-    // }
-    // const changeHandlerGender = (e) => {
-    //     setGender({ ...currentGender, gender: e.target.value })
-
-    // }
-    // const changeHandlerProgram = (e) => {
-    //     setProgram({ ...currentProgram, program: e.target.value })
-    // }
     const changeFileHandle = (e) => {
-        const objectURL = URL.createObjectURL(e.target.files[0])
-        setFormData({ ...formData, image: objectURL })
+        const objectURL = e.target.files[0]
+        if (objectURL.size > 21000) {
+            alert("File size is too big!")
+        }
+        // setFormData({ ...formData, image: objectURL })
+
+        toDataURL(URL.createObjectURL(e.target.files[0]), function (dataUrl) {
+            console.log('RESULT:', dataUrl)
+            setFormData({ ...formData, image: dataUrl })
+
+        })
+
 
     }
-    toDataURL(formData.image, function (dataUrl) {
-        // console.log('RESULT:', dataUrl)
-    })
 
 
     const onSubmit = e => {
         e.preventDefault();
-        console.log(formData)
-        // const { userName, city, gender, program, image } = formData;
         profileRegister(formData)
     }
 
-    // const [img, setImg] = useState({
-    //     image: ''
-    // })
-
-
     useEffect(() => {
         getCurrentProfile();
+        // loadUser();
     }, [])
 
     const city = ['Faisalabad', 'Lahore', 'Karachi', 'Multan', 'Sialkot'];
@@ -132,115 +124,116 @@ const UserProfile = ({ auth: { user }, profile: { loading, profile }, getCurrent
 
             <ThemeProvider theme={theme}>
                 <Typography variant="h3">
-                    Welcome {profile && profile.userName}
+                    Welcome {profile.userName || user.email}
 
                 </Typography>
             </ThemeProvider>
 
 
-            {profile !== null ? <Fragment>
+            {profile.userName ? <Fragment>
                 <div>You Have Created Your Profile !</div>
             </Fragment> :
                 <Fragment>
-                    <p>You haven't set up your Profile, make a Profile</p>
+                <p>You haven't set up your Profile, make a Profile</p>
 
-                    <div className={classes.root}>{"Fill Up the Form To create your Profile"}</div>
-                    <form onSubmit={e => onSubmit(e)}>
-                        <div className='Profile-Container'>
-                            <Container maxWidth="lg">
-                                {/* <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '100vh' }} /> */}
-                                <TextField required id="standard-required" label="Enter Your Name" variant="outlined"
-                                    placeholder="Name"
-                                    name="userName"
-                                    value={formData.userName}
+                <div className={classes.root}>{"Fill Up the Form To create your Profile"}</div>
+                <form onSubmit={e => onSubmit(e)}>
+                    <div className='Profile-Container'>
+                        <Container maxWidth="lg">
+                            {/* <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '100vh' }} /> */}
+                            <TextField required id="standard-required" label="Enter Your Name" variant="outlined"
+                                placeholder="Name"
+                                name="userName"
+                                value={formData.userName}
+                                onChange={e => onChange(e)}
+                            />
+                            <br />
+                            <FormControl variant="filled" className={classes.formControl} >
+                                <InputLabel id="demo-simple-select-filled-label">City</InputLabel>
+                                <Select
+                                    labelId="demo-simple-select-filled-label"
+                                    id="demo-simple-select-filled"
+                                    name="city"
+                                    value={formData.city}
                                     onChange={e => onChange(e)}
-                                />
+                                >
+                                    <MenuItem value="">
+                                        <em>None</em>
+                                    </MenuItem>
+                                    {city.map((cty) => (
+                                        <MenuItem value={cty}>{cty}</MenuItem>
+                                    ))}
+
+                                </Select>
+                            </FormControl>
+                            <FormControl variant="filled" className={classes.formControl}>
+                                <InputLabel id="demo-simple-select-filled-label">Gender</InputLabel>
+                                <Select
+                                    labelId="demo-simple-select-filled-label"
+                                    id="demo-simple-select-filled"
+                                    name="gender"
+                                    value={formData.gender}
+                                    onChange={e => onChange(e)}
+
+                                >
+                                    <MenuItem value="">
+                                        <em>None</em>
+                                    </MenuItem>
+                                    {gender.map((gen) => (
+                                        <MenuItem name='gen' value={gen}>{gen}</MenuItem>
+                                    ))}
+
+                                </Select>
+                            </FormControl>
+                            <FormControl variant="filled" className={classes.formControl}>
+                                <InputLabel id="demo-simple-select-filled-label">Program</InputLabel>
+                                <Select
+                                    labelId="demo-simple-select-filled-label"
+                                    id="demo-simple-select-filled"
+                                    name="program"
+                                    value={formData.program}
+                                    onChange={e => onChange(e)}
+
+                                >
+                                    <MenuItem value="">
+                                        <em>None</em>
+                                    </MenuItem>
+                                    {program.map((prg) => (
+                                        <MenuItem value={prg}>{prg}</MenuItem>
+                                    ))}
+
+
+
+                                </Select>
                                 <br />
-                                <FormControl variant="filled" className={classes.formControl} >
-                                    <InputLabel id="demo-simple-select-filled-label">City</InputLabel>
-                                    <Select
-                                        labelId="demo-simple-select-filled-label"
-                                        id="demo-simple-select-filled"
-                                        name="city"
-                                        value={formData.city}
-                                        onChange={e => onChange(e)}
-                                    >
-                                        <MenuItem value="">
-                                            <em>None</em>
-                                        </MenuItem>
-                                        {city.map((cty) => (
-                                            <MenuItem value={cty}>{cty}</MenuItem>
-                                        ))}
+                                {/* <UploadBtn id='uploadbtn'/> */}
+                                <div className={classes.root}>
+                                    <input
+                                        accept="image/*"
+                                        className={classes.input}
+                                        id="contained-button-file"
+                                        multiple
+                                        type="file"
+                                        name='User-Image'
+                                        onChange={changeFileHandle}
 
-                                    </Select>
-                                </FormControl>
-                                <FormControl variant="filled" className={classes.formControl}>
-                                    <InputLabel id="demo-simple-select-filled-label">Gender</InputLabel>
-                                    <Select
-                                        labelId="demo-simple-select-filled-label"
-                                        id="demo-simple-select-filled"
-                                        name="gender"
-                                        value={formData.gender}
-                                        onChange={e => onChange(e)}
-
-                                    >
-                                        <MenuItem value="">
-                                            <em>None</em>
-                                        </MenuItem>
-                                        {gender.map((gen) => (
-                                            <MenuItem name='gen' value={gen}>{gen}</MenuItem>
-                                        ))}
-
-                                    </Select>
-                                </FormControl>
-                                <FormControl variant="filled" className={classes.formControl}>
-                                    <InputLabel id="demo-simple-select-filled-label">Program</InputLabel>
-                                    <Select
-                                        labelId="demo-simple-select-filled-label"
-                                        id="demo-simple-select-filled"
-                                        name="program"
-                                        value={formData.program}
-                                        onChange={e => onChange(e)}
-
-                                    >
-                                        <MenuItem value="">
-                                            <em>None</em>
-                                        </MenuItem>
-                                        {program.map((prg) => (
-                                            <MenuItem value={prg}>{prg}</MenuItem>
-                                        ))}
-
-
-
-                                    </Select>
-                                    <br />
-                                    {/* <UploadBtn id='uploadbtn'/> */}
-                                    <div className={classes.root}>
-                                        <input
-                                            accept="image/*"
-                                            className={classes.input}
-                                            id="contained-button-file"
-                                            multiple
-                                            type="file"
-                                            onChange={changeFileHandle}
-
-                                        />
-                                        <label htmlFor="contained-button-file">
-                                            <Button variant="contained" color="primary" component="span" >
-                                                Upload
+                                    />
+                                    <label htmlFor="contained-button-file">
+                                        <Button variant="contained" color="primary" component="span" >
+                                            Upload
         </Button>
-                                        </label>
-                                    </div>
-                                </FormControl>
+                                    </label>
+                                </div>
+                            </FormControl>
 
-                                <Button variant="contained" size="large" color="danger" type='submit' >
-                                    Create
+                            <Button variant="contained" size="large" color="danger" type='submit' >
+                                Create
                          </Button>
-                            </Container>
+                        </Container>
 
-                        </div>
-                    </form>
-                </Fragment>}
+                    </div>
+                </form>
+            </Fragment>}
 
         </div>
 

@@ -38,8 +38,8 @@ function MenuAppBar(props) {
     const onClick = (e) => {
         props.openDrawer();
     }
-    if(!props.isAuthenticated){
-        return <Redirect to='/signup'/>
+    if (!props.isAuthenticated) {
+        return <Redirect to='/signup' />
     }
 
     return (
@@ -55,19 +55,24 @@ function MenuAppBar(props) {
                             PRESIDENTIAL INITIATIVE FOR  ARTIFICIAL INTELLIGENCE AND COMPUTING (PIAIC)
                     </span>
                     </div>
-                    {auth && (
-                        <div className='student-portal-profile-logo-div'>
+                    {props.profile.profile.image ? <IconButton className='student-portal-profile-logo-div-original'
+                        aria-label="account of current user"
+                        aria-controls="menu-appbar"
+                        aria-haspopup="true"
+                    >
+                        <img className='student-portal-profile-logo-div-img' src={props.profile.profile.image} alt="user-avatar" onClick={e => onClick(e)} />
+                    </IconButton> : <div className='student-portal-profile-logo-div'>
                             <IconButton
                                 aria-label="account of current user"
                                 aria-controls="menu-appbar"
                                 aria-haspopup="true"
-                                onClick={e => onClick()}
+                                onClick={e => onClick(e)}
                                 color="inherit"
                             >
                                 <AccountCircle id="circle" />
                             </IconButton>
                         </div>
-                    )}
+                    }
                 </Toolbar>
             </AppBar>
             <SlideBar />
@@ -82,11 +87,15 @@ function MenuAppBar(props) {
 MenuAppBar.propTypes = {
     getInfo: PropTypes.bool,
     isAuthenticated: PropTypes.bool,
+    auth: PropTypes.object.isRequired,
+    profile: PropTypes.object.isRequired,
 }
 const getResult = state => ({
 
     getInfo: state.drawerReducer.userDrawer,
-    isAuthenticated: state.auth.isAuthenticated
+    isAuthenticated: state.auth.isAuthenticated,
+    auth: state.auth,
+    profile: state.ProfileReducer
 
 })
 

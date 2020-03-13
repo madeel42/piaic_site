@@ -13,8 +13,8 @@ import { connect } from "react-redux";
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import IconButton from '@material-ui/core/IconButton';
 import PropTypes from 'prop-types'
-import {closeDrawer,openDrawer} from '../../../actions/drawer'
-import {logout }from '../../../actions/auth'
+import { closeDrawer, openDrawer } from '../../../actions/drawer'
+import { logout } from '../../../actions/auth'
 import './drawer.css'
 
 const useStyles = makeStyles({
@@ -26,12 +26,12 @@ const useStyles = makeStyles({
     },
 });
 
-const TemporaryDrawer=({getInfo,closeDrawer,logout})=> {
+const TemporaryDrawer = ({ getInfo, closeDrawer, logout, profile: { profile } }) => {
     const classes = useStyles();
-    const onClose = (e)=>{
+    const onClose = (e) => {
         closeDrawer()
     }
-    const onClick=()=>{
+    const onClick = () => {
         logout()
     }
     const [state, setState] = React.useState({
@@ -55,7 +55,7 @@ const TemporaryDrawer=({getInfo,closeDrawer,logout})=> {
             onKeyDown={toggleDrawer(side, false)}
         >
             <div className='drawer-logo'>
-                <IconButton
+                {profile.image == null ? <IconButton
                     aria-label="account of current user"
                     aria-controls="menu-appbar"
                     aria-haspopup="true"
@@ -63,13 +63,16 @@ const TemporaryDrawer=({getInfo,closeDrawer,logout})=> {
                     id="iconInDrawer"
                 >
                     <AccountCircle />
-                </IconButton>
+                </IconButton> : <div className='slideBar-image'>
+                        <img src={profile.image} alt={profile.userName + 'avatar'} />
+                    </div>
+                }
             </div>
             <div id="profile-name">
-                <h4>Name</h4>
+                <h4>{profile.userName}</h4>
             </div>
             <Accordion></Accordion>
-            <List id="drawer-list" onClick={e=>onClick(e)}>
+            <List id="drawer-list" onClick={e => onClick(e)}>
                 {['Logout'].map((text, index) => (
                     <ListItem button key={text}>
                         <ListItemIcon>{index % 2 === 0 ? <ExitToAppOutlinedIcon /> : <InfoIcon />}</ListItemIcon>
@@ -81,19 +84,21 @@ const TemporaryDrawer=({getInfo,closeDrawer,logout})=> {
     );
     return (
         <div>
-            <Drawer anchor="right" open={getInfo} onClose={e=>onClose(e)}>
+            <Drawer anchor="right" open={getInfo} onClose={e => onClose(e)}>
                 {sideList('right')}
             </Drawer>
         </div>
     );
 }
-TemporaryDrawer.propTypes={
-    getInfo:PropTypes.bool,
+TemporaryDrawer.propTypes = {
+    getInfo: PropTypes.bool,
+    profile: PropTypes.object.isRequired,
 }
 const getResult = state => ({
 
     getInfo: state.drawerReducer.userDrawer,
+    profile: state.ProfileReducer
 
 });
 
-export default connect(getResult,{openDrawer,closeDrawer,logout})(TemporaryDrawer);
+export default connect(getResult, { openDrawer, closeDrawer, logout })(TemporaryDrawer);

@@ -1,5 +1,6 @@
 import axios from 'axios'
 import setAuthToken from '../utils/setAuthToken'
+import { getCurrentProfile } from './profile'
 
 
 
@@ -15,9 +16,10 @@ export const loadUser = () => async dispatch => {
             type: 'USER_LOADED',
             payload: res.data
         })
+        
 
     } catch (error) {
-      
+
         if (error) dispatch({
             type: 'AUTH_ERROR',
         })
@@ -43,7 +45,9 @@ export const register = ({ cnic, email, password }) => async dispatch => {
             type: 'REGISTER_SUCCESS',
             payload: res.data
         });
-        // dispatch(loadUser());
+        dispatch(loadUser())
+        dispatch(getCurrentProfile())
+
     } catch (err) {
         console.log(err.message)
         dispatch({
@@ -51,8 +55,8 @@ export const register = ({ cnic, email, password }) => async dispatch => {
         });
 
     }
-   
-    }
+
+}
 
 
 
@@ -72,7 +76,9 @@ export const login = (email, password) => async dispatch => {
             type: 'LOGIN_SUCCESS',
             payload: res.data
         });
-        dispatch(loadUser());
+
+        dispatch(loadUser())
+        dispatch(getCurrentProfile())
 
     } catch (err) {
         const errors = err.response.data.errors;
@@ -87,9 +93,9 @@ export const login = (email, password) => async dispatch => {
 
 
 export const logout = () => dispatch => {
-    // dispatch({
-    //     type: 'CLEAR_PROFILE'
-    // });
+    dispatch({
+        type: 'CLEAR_PROFILE'
+    });
 
     dispatch({
         type: 'LOG_OUT'

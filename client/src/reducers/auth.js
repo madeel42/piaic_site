@@ -1,5 +1,5 @@
 const initialState = {
-    user: null,
+    user: {},
     token: localStorage.getItem('token'),
     isAuthenticated: null,
     loading: true
@@ -21,6 +21,7 @@ export default function (state = initialState, action) {
             return {
                 ...state,
                 ...payload,
+            
                 isAuthenticated: true,
                 loading: false
             }
@@ -34,6 +35,7 @@ export default function (state = initialState, action) {
             localStorage.removeItem('token')
             return {
                 ...state,
+                user:{},
                 token: null,
                 isAuthenticated: false,
                 loading: true
