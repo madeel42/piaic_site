@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const auth = require('../../middleware/authMiddleware')
-const Profile = require('../../models/Profile')
+const Profile = require('../../models/Articles')
 const User = require('../../models/User')
 const { check, validationResult } = require('express-validator');
 
@@ -10,12 +10,13 @@ const { check, validationResult } = require('express-validator');
 // route for getting user profile
 router.get('/me', auth, async (req, res) => {
     try {
-        const profile = await Profile.findOne({ user: req.user.id })    // this user is getting through profile model
+        // const profile = await Profile.findOne({ user: req.user.id })    // this user is getting through profile model
+        const user = await User.findById(req.user.id);
 
-        if (!profile) {
+        if (!user.profile) {
             return res.status(400).json([{ msg: "There is no profile for this user" }])
         }
-        res.json(profile);
+        res.json(user.profile);
 
     } catch (err) {
         console.error(err.message);
@@ -27,11 +28,12 @@ router.get('/me', auth, async (req, res) => {
 // creating user Profile
 router.post('/', auth, async (req, res) => {
 
-    const { userName, city, gender, program, image } = req.body;
+    const { userName, fName,city, gender, program, image } = req.body;
     //Build Profile Object
     const profileFields = {};
     profileFields.user = req.user.id;
     if (userName) profileFields.userName = userName;
+    if (fName) profileFields.fName = fName;
     if (program) profileFields.program = program;
     if (image) profileFields.image = image;
     if (city) profileFields.city = city;
@@ -54,10 +56,11 @@ router.post('/', auth, async (req, res) => {
         // }
 
         // if not found then we would create
-        profile = new Profile(profileFields);
-        await profile.save();
+        const user = await User.findById(req.user.id);
+        user.profile=profileFields
+        await user.save();
 
-        res.json(profile);
+        res.json(user);
     } catch (err) {
         console.error(err.message);
         res.status(500).send("Profile-Server Error ");

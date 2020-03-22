@@ -11,7 +11,7 @@ const UserSchema = new mongoose.Schema({
 
 
     },
-  
+
     password: {
         type: String,
         required: true
@@ -19,6 +19,48 @@ const UserSchema = new mongoose.Schema({
     date: {
         type: Date,
         default: Date.now
+    },
+    profile: {
+        userName: {
+            type: String,
+
+        },  
+         fName: {
+            type: String,
+
+        },
+        city: {
+            type: String,
+
+        },
+        gender: {
+            type: String,
+
+        },
+        program: {
+            type: String,
+
+        },
+        image: {
+            type: String
+        },
+    },
+    post:{
+        text:{
+            type:String,
+            
+        },
+        name:{
+            type:String
+        },
+        likes:[
+            {
+                user:{
+                    type:Schema.Types.ObjectId,
+                    ref:'user'
+                }
+            }
+        ]
     }
 });
 

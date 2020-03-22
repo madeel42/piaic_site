@@ -50,7 +50,7 @@ const SimpleExpansionPanel = ({ auth: { user }, profile: { loading, profile } })
                                     S/O
                                 </th>
                                 <th className='profile-info-user'>
-                                    {profile.userName}
+                                    {profile.fName}
                                 </th>
                             </tr><tr>
                                 <th className='profile-info-headers'>

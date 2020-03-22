@@ -16,7 +16,7 @@ export const loadUser = () => async dispatch => {
             type: 'USER_LOADED',
             payload: res.data
         })
-        
+
 
     } catch (error) {
 
@@ -46,6 +46,7 @@ export const register = ({ cnic, email, password }) => async dispatch => {
             payload: res.data
         });
         dispatch(loadUser())
+      
         dispatch(getCurrentProfile())
 
     } catch (err) {

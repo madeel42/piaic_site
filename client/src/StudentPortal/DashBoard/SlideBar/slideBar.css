@@ -1,66 +1,61 @@
-.slideBar-main{
-    background-color: #292a2c;
-    /* width: 100px; */
-   position: fixed;
-    margin-top: 61px;
-    width: 70px;
-    height: 92vh;
+.slideBar-main {
+  background-color: #292a2c;
+  /* width: 100px; */
+  position: fixed;
+  margin-top: 61px;
+  width: 70px;
+  height: 92vh;
 }
-.slideBar-container{
-    padding: 5px;
-    cursor: pointer;
-
+.slideBar-container {
+  padding: 5px;
+  cursor: pointer;
 }
-.link{
-    text-decoration: none;
-    display: flex;
-    color: white;
-
+.link {
+  text-decoration: none;
+  /* display: flex; */
+  color: white;
+  font-family: " Courier" !important;
 }
-.slideBar-img{
-    width: 40px;
-   
+.slideBar-img {
+  width: 40px;
 }
-.slideBar-text{
-   display: none;
-    margin-left: 0px;
-    margin-top: 10px;
-    font-size: 16px;
-    font-weight: 300;
-
+.slideBar-text {
+  display: none;
+  margin-left: 0px;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 300;
 }
-.abb{
-    width: 40px;
-    margin-left: 6px;
+.abb {
+  width: 40px;
+  margin-left: 6px;
 }
-.abb-2{
-    width: 40px;
-    margin-left: 4px;
+.abb-2 {
+  width: 40px;
+  margin-left: 4px;
 }
-.slideBar-main:hover{
-    width: 190px;
-    transition:width, .5s;
-    color: white;
+.slideBar-main:hover {
+  width: 190px;
+  transition: width, 0.5s;
+  color: white;
 }
 
-.slideBar-main:hover .slideBar-text{
-    display: block;
-    
-   
+.slideBar-main:hover .slideBar-text {
+  display: block;
 }
-.slideBar-container:hover{
+.slideBar-container:hover {
   background-color: #01645f;
 }
-.slideBar-content{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    flex-wrap: wrap;
-    padding: 9px;
-    width: fit-content;
+.slideBar-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-wrap: wrap;
+  padding: 9px;
+  width: fit-content;
 }
-#slideBar-profile-div:hover #profileMenu{
-    visibility: visible;
+#slideBar-profile-div:hover #profileMenu {
+  visibility: visible;
 }
-#slideBar-payment-div:hover #payments{
-    visibility: visible;
+#slideBar-payment-div:hover #payments {
+  visibility: visible;
 }

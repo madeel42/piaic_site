@@ -49,9 +49,9 @@ export const createProfile = (formData, edit = false, history) => async dispatch
     }
 
 }
-export const profileRegister = ({ userName, city, gender, program, image }) => async dispatch => {
+export const profileRegister = ({ userName, fName,city, gender, program, image }) => async dispatch => {
 
-    const body = { userName, city, gender, program, image };
+    const body = { userName, fName,city, gender, program, image };
     try {
         let fd = new FormData();
 
@@ -65,6 +65,7 @@ export const profileRegister = ({ userName, city, gender, program, image }) => a
         });
 
         dispatch(loadUser());
+        dispatch(getCurrentProfile())
     } catch (err) {
         console.log(err.message)
         dispatch({

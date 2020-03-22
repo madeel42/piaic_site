@@ -7,7 +7,7 @@ import { getCurrentProfile } from '../../../actions/profile'
 import Button from '@material-ui/core/Button';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import{loadUser} from '../../../actions/auth'
+import { loadUser } from '../../../actions/auth'
 import Container from '@material-ui/core/Container';
 import './userProfile.css'
 import DashNav from '../DashNav/dashNav'
@@ -72,10 +72,11 @@ function toDataURL(url, callback) {
 
 
 
-const UserProfile = ({ auth: { user }, profile: { loading, profile }, getCurrentProfile, profileRegister }) => {
+const UserProfile = ({ auth: { user }, profile, loading, getCurrentProfile, profileRegister }) => {
     const classes = useStyles();
     const [formData, setFormData] = useState({
         userName: '',
+        fName: '',
         city: '',
         gender: '',
         program: '',
@@ -104,6 +105,7 @@ const UserProfile = ({ auth: { user }, profile: { loading, profile }, getCurrent
 
     const onSubmit = e => {
         e.preventDefault();
+        console.log(formData);
         profileRegister(formData)
     }
 
@@ -116,7 +118,7 @@ const UserProfile = ({ auth: { user }, profile: { loading, profile }, getCurrent
     const gender = ['Male', 'Female', 'Other'];
 
     const program = ['AI', 'BlockChain', 'Cloud Native Computing', '5G computing'];
-    return loading && profile === null ? <Spinner /> : <Fragment >
+    return loading === null ? <Spinner /> : <Fragment >
         <DashNav />
 
         <div className='profile-creation-alert'>
@@ -124,7 +126,7 @@ const UserProfile = ({ auth: { user }, profile: { loading, profile }, getCurrent
 
             <ThemeProvider theme={theme}>
                 <Typography variant="h3">
-                    Welcome {profile.userName || user.email}
+                    Welcome {profile.userName + ' ' + profile.fName || user.email}
 
                 </Typography>
             </ThemeProvider>
@@ -134,106 +136,111 @@ const UserProfile = ({ auth: { user }, profile: { loading, profile }, getCurrent
                 <div>You Have Created Your Profile !</div>
             </Fragment> :
                 <Fragment>
-                <p>You haven't set up your Profile, make a Profile</p>
+                    <p>You haven't set up your Profile, make a Profile</p>
 
-                <div className={classes.root}>{"Fill Up the Form To create your Profile"}</div>
-                <form onSubmit={e => onSubmit(e)}>
-                    <div className='Profile-Container'>
-                        <Container maxWidth="lg">
-                            {/* <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '100vh' }} /> */}
-                            <TextField required id="standard-required" label="Enter Your Name" variant="outlined"
-                                placeholder="Name"
-                                name="userName"
-                                value={formData.userName}
-                                onChange={e => onChange(e)}
-                            />
-                            <br />
-                            <FormControl variant="filled" className={classes.formControl} >
-                                <InputLabel id="demo-simple-select-filled-label">City</InputLabel>
-                                <Select
-                                    labelId="demo-simple-select-filled-label"
-                                    id="demo-simple-select-filled"
-                                    name="city"
-                                    value={formData.city}
+                    <div className={classes.root}>{"Fill Up the Form To create your Profile"}</div>
+                    <form onSubmit={e => onSubmit(e)}>
+                        <div className='Profile-Container'>
+                            <Container maxWidth="lg">
+                                {/* <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '100vh' }} /> */}
+                                <TextField required id="standard-required" label="Enter Your Name" variant="outlined"
+                                    placeholder="Name"
+                                    name="userName"
+                                    value={formData.userName}
                                     onChange={e => onChange(e)}
-                                >
-                                    <MenuItem value="">
-                                        <em>None</em>
-                                    </MenuItem>
-                                    {city.map((cty) => (
-                                        <MenuItem value={cty}>{cty}</MenuItem>
-                                    ))}
-
-                                </Select>
-                            </FormControl>
-                            <FormControl variant="filled" className={classes.formControl}>
-                                <InputLabel id="demo-simple-select-filled-label">Gender</InputLabel>
-                                <Select
-                                    labelId="demo-simple-select-filled-label"
-                                    id="demo-simple-select-filled"
-                                    name="gender"
-                                    value={formData.gender}
+                                /> <TextField required id="standard-required" label="Enter Your Father Name" variant="outlined"
+                                    placeholder="Father Name"
+                                    name="fName"
+                                    value={formData.fName}
                                     onChange={e => onChange(e)}
-
-                                >
-                                    <MenuItem value="">
-                                        <em>None</em>
-                                    </MenuItem>
-                                    {gender.map((gen) => (
-                                        <MenuItem name='gen' value={gen}>{gen}</MenuItem>
-                                    ))}
-
-                                </Select>
-                            </FormControl>
-                            <FormControl variant="filled" className={classes.formControl}>
-                                <InputLabel id="demo-simple-select-filled-label">Program</InputLabel>
-                                <Select
-                                    labelId="demo-simple-select-filled-label"
-                                    id="demo-simple-select-filled"
-                                    name="program"
-                                    value={formData.program}
-                                    onChange={e => onChange(e)}
-
-                                >
-                                    <MenuItem value="">
-                                        <em>None</em>
-                                    </MenuItem>
-                                    {program.map((prg) => (
-                                        <MenuItem value={prg}>{prg}</MenuItem>
-                                    ))}
-
-
-
-                                </Select>
+                                />
                                 <br />
-                                {/* <UploadBtn id='uploadbtn'/> */}
-                                <div className={classes.root}>
-                                    <input
-                                        accept="image/*"
-                                        className={classes.input}
-                                        id="contained-button-file"
-                                        multiple
-                                        type="file"
-                                        name='User-Image'
-                                        onChange={changeFileHandle}
+                                <FormControl variant="filled" className={classes.formControl} >
+                                    <InputLabel id="demo-simple-select-filled-label">City</InputLabel>
+                                    <Select
+                                        labelId="demo-simple-select-filled-label"
+                                        id="demo-simple-select-filled"
+                                        name="city"
+                                        value={formData.city}
+                                        onChange={e => onChange(e)}
+                                    >
+                                        <MenuItem value="">
+                                            <em>None</em>
+                                        </MenuItem>
+                                        {city.map((cty) => (
+                                            <MenuItem value={cty}>{cty}</MenuItem>
+                                        ))}
 
-                                    />
-                                    <label htmlFor="contained-button-file">
-                                        <Button variant="contained" color="primary" component="span" >
-                                            Upload
+                                    </Select>
+                                </FormControl>
+                                <FormControl variant="filled" className={classes.formControl}>
+                                    <InputLabel id="demo-simple-select-filled-label">Gender</InputLabel>
+                                    <Select
+                                        labelId="demo-simple-select-filled-label"
+                                        id="demo-simple-select-filled"
+                                        name="gender"
+                                        value={formData.gender}
+                                        onChange={e => onChange(e)}
+
+                                    >
+                                        <MenuItem value="">
+                                            <em>None</em>
+                                        </MenuItem>
+                                        {gender.map((gen) => (
+                                            <MenuItem name='gen' value={gen}>{gen}</MenuItem>
+                                        ))}
+
+                                    </Select>
+                                </FormControl>
+                                <FormControl variant="filled" className={classes.formControl}>
+                                    <InputLabel id="demo-simple-select-filled-label">Program</InputLabel>
+                                    <Select
+                                        labelId="demo-simple-select-filled-label"
+                                        id="demo-simple-select-filled"
+                                        name="program"
+                                        value={formData.program}
+                                        onChange={e => onChange(e)}
+
+                                    >
+                                        <MenuItem value="">
+                                            <em>None</em>
+                                        </MenuItem>
+                                        {program.map((prg) => (
+                                            <MenuItem value={prg}>{prg}</MenuItem>
+                                        ))}
+
+
+
+                                    </Select>
+                                    <br />
+                                    {/* <UploadBtn id='uploadbtn'/> */}
+                                    <div className={classes.root}>
+                                        <input
+                                            accept="image/*"
+                                            className={classes.input}
+                                            id="contained-button-file"
+                                            multiple
+                                            type="file"
+                                            name='User-Image'
+                                            onChange={changeFileHandle}
+
+                                        />
+                                        <label htmlFor="contained-button-file">
+                                            <Button variant="contained" color="primary" component="span" >
+                                                Upload
         </Button>
-                                    </label>
-                                </div>
-                            </FormControl>
+                                        </label>
+                                    </div>
+                                </FormControl>
 
-                            <Button variant="contained" size="large" color="danger" type='submit' >
-                                Create
+                                <Button variant="contained" size="large" color="danger" type='submit' >
+                                    Create
                          </Button>
-                        </Container>
+                            </Container>
 
-                    </div>
-                </form>
-            </Fragment>}
+                        </div>
+                    </form>
+                </Fragment>}
 
         </div>
 
@@ -252,7 +259,8 @@ UserProfile.propTypes = {
 
 const mapStateToProps = state => ({
     auth: state.auth,
-    profile: state.ProfileReducer
+    profile: state.ProfileReducer.profile,
+    loading: state.ProfileReducer.loading
 
 })
 export default connect(mapStateToProps, { getCurrentProfile, profileRegister })(UserProfile);

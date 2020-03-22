@@ -20,6 +20,7 @@ import setAuthToken from './utils/setAuthToken'
 import { loadUser } from './actions/auth'
 import CreateProfile from './StudentPortal/DashBoard/userProfile/CreateProfle'
 import UserProfile from './StudentPortal/DashBoard/userProfile/userProfile'
+import Publications from './StudentPortal/Posts/Posts'
 
 
 
@@ -45,6 +46,7 @@ const App = () => {
           <PrivateRoute exact path='/create-profile' component={CreateProfile} />
           <PrivateRoute exact path='/dashboard' component={UserProfile} />
           <Route exact path="/payment" component={Payment} />
+          <Route exact path="/p" component={Publications} />
           <Route exact path="/paymenthistory" component={PaymentHistory} />
           <Route exact path="/paymentbranches" component={PaymentBranches} />
           <Route exact path="/announcements" component={Announcement} />
