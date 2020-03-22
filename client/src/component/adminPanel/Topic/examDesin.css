@@ -1,0 +1,118 @@
+/* input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+    padding: 0px;
+    height: 25px;
+    width: 20px;
+    position: relative;
+    top: 8px;
+    left: -5px;
+} */
+.chkbox{
+    box-sizing: border-box;
+    padding: 0px;
+    height: 25px;
+    /* width: 20px; */
+    position: relative;
+    /* top: 8px; */
+    /* left: -5px; */
+    top: -25px;
+    left: -24px;
+    width: 26px;
+}
+.negativebtn{
+    cursor: pointer;
+    background-color: aliceblue;
+    border: none;
+    position: relative;
+    left: 314%;
+    top: -34px;
+}
+.plusBtn{
+    cursor: pointer;
+    background-color: aliceblue;
+    border: none;
+}
+.removeAnsInSpan{
+        position: relative;
+    left: 317%;
+    top: -34px;
+}
+.removAns{
+    position: relative;
+    left: 209px;
+    top: -36px;
+  
+}
+.saveAns{
+    position: relative;
+    left: 42px;
+}
+.rightArrow{
+    position: relative;
+    left: 9px;
+    font-size: 26px;
+    cursor: pointer;
+}
+.leftArrow{
+    position: relative;
+    left: -4px;
+    font-size: 26px;
+    cursor: pointer;
+}
+.arrowDiv{
+    position: relative;
+    top: 7px;
+    margin-left: 95%;
+}
+/* .makeStyles-paper-3 {
+    width: 1091px !important;
+    border: 2px solid #000;
+    padding: 16px 32px 24px;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12);
+    background-color: #fff;
+} */
+.inputBoxAns{
+    width: 317%;
+    height: 43px;
+    position: relative;
+    left: -17px;
+}
+.saveCloseBtn{
+    position: relative;
+    left: 35%;
+    top: 18px;
+}
+
+@media screen and (max-width:1176px) and (min-width:745px) {
+    .makeStyles-paper-3 {
+        width: 765px !important;
+        border: 2px solid #000 !important;
+        padding: 16px 32px 24px !important;
+        box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12) !important;
+        background-color: #fff !important;
+    }
+    .inputBoxAns {
+        width: 204%;
+        height: 43px;
+        position: relative;
+        left: -17px;
+    }
+    .negativebtn {
+        cursor: pointer;
+        background-color: aliceblue;
+        border: none;
+        position: relative;
+        left: 201%;
+        top: -34px;
+    }
+    .removeAnsInSpan {
+        position: relative;
+        left: 203%;
+        top: -34px;
+    }
+    .saveAns {
+        position: relative;
+        left: -71px;
+        top: -18px;
+    }
+}

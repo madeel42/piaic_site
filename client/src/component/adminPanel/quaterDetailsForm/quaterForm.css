@@ -1,0 +1,31 @@
+.quaterDetailsForm{
+    position: relative;
+    top: 97px;
+    margin-left: 42%;
+
+}
+.quaterDetailsHeading{
+    margin-left: 41%;
+    top: 91px;
+    position: relative;
+}
+.showquaterDiv{
+    display: block;
+}
+.hidequaterDiv{
+    display: none;
+}
+.btnSty{
+    position: relative;
+    left: -78px;
+}
+
+.btnDivStyl{
+    position: relative;
+    left: 1px;
+    top: 11px;
+}
+.MuiFormControl-root{
+    width: 39%;
+
+}

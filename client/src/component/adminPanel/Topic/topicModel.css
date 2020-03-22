@@ -1,0 +1,10 @@
+.hide{
+display: none;
+}
+.ShowDivv{
+    display: block;
+}
+.MuiInput-root {
+    position: relative;
+    /* width: 552%; */
+}

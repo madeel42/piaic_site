@@ -1,0 +1,198 @@
+.coursename {
+    font-size: 16px;
+    text-align: right;
+    position: relative;
+    bottom: 0px;
+    font-family: sans-serif;
+    left: -10px;
+    color: #4D4D4D;
+    font-weight: bold;
+}
+.cityname {
+    position: relative;
+    top: -1px;
+    font-size: 19px;
+    left: -13px;
+    color: #9A9A8F !important;
+}
+.bactch {
+    color: #9a9a9a !important;
+    font-size: 16px;
+    line-height: 1.4em;
+    text-align: right;
+    position: relative;
+    top: 9px;
+    left: -69px;
+}
+.plusBtn{
+    background-color: transparent;
+    border: none;
+}
+.addCoursediv {
+    float: left;
+    padding-left: 31px;
+    padding-top: 224px;
+}
+.MuiInputBase-root{
+    width: 168%;
+}
+.courseSubmitBtn{
+    margin-left: 0px;
+    margin-bottom: 18px;
+    position: relative;
+    top: 12px;
+}
+
+.updateBtn1{
+    position: relative;
+    left: 191px;
+    top: -27px;
+    background-color: none;
+    background-color: aliceblue;
+    border: none;
+    color: brown;
+}
+a{
+    
+       color: rgba(0, 255, 116, .09) !important;
+}
+
+.MuiInput-root {
+    position: relative;
+    width: 245px;
+}
+.MuiPaper-root {
+    width: 16% !important;
+    /* position: relative; */
+    /* top: -39px; */
+    margin-left: 237px !important;
+    /* left: 126px; */
+    margin-top: 30px !important;
+}
+
+@media screen and (max-width: 1093px) and (min-width: 994px){
+    .updateBtn1 {
+        position: relative;
+        left: 191px;
+        top: -28px;
+        /* background-color: none; */
+        background-color: aliceblue;
+        border: none;
+        color: brown;
+    }
+}
+/* @media screen and (max-width: 994px) and (min-width: 904px){
+    .updateBtn1 {
+        position: relative;
+        left: 191px;
+        top: 55px;
+        /* background-color: none; */
+        /* background-color: aliceblue; */
+        /* border: none; */
+        /* color: brown; */
+    /* } */
+/* }  */
+@media screen and (max-width: 994px) and (min-width: 904px){
+    .updateBtn1 {
+        position: relative;
+        left: 191px;
+        top: -31px !important;
+        /* background-color: none; */
+        background-color: aliceblue;
+        border: none;
+        color: brown;
+    }
+}
+@media screen and (max-width: 904px) and (min-width: 823px){
+    .updateBtn1 {
+        position: relative;
+        left: 191px;
+        top: -32px !important;
+        background-color: none;
+        background-color: aliceblue;
+        border: none;
+        color: brown;
+    }
+}
+@media screen and (max-width: 823px) and (min-width: 575px){
+    .updateBtn1 {
+        position: relative;
+        left: 191px;
+        top: 56px !important;
+        background-color: none;
+        background-color: aliceblue;
+        border: none;
+        color: brown;
+    }
+    .fistvalacontaoner {
+        position: relative;
+        top: -77px;
+    }        
+}
+@media screen and (max-width: 574px) and (min-width: 250px){
+    .fistvalacontaoner {
+        position: relative;
+        top: -16px;
+    }
+    .cityname {
+        position: relative;
+        top: 47px;
+        font-size: 19px;
+        left: -13px;
+        color: #9A9A8F !important;
+    }
+    .updateBtn1 {
+        position: relative;
+        left: 191px;
+        top: 20px;
+        /* background-color: none; */
+        background-color: aliceblue;
+        border: none;
+        color: brown;
+    }
+    .bactch {
+        color: #9a9a9a !important;
+        font-size: 16px;
+        line-height: 1.4em;
+        text-align: right;
+        position: relative;
+        top: 41px;
+        left: -202px;
+    }
+    .coursename {
+        font-size: 16px;
+        text-align: right;
+        position: relative;
+        bottom: 46px;
+        font-family: sans-serif;
+        left: 11px;
+        color: #4D4D4D;
+        font-weight: bold;
+    }
+}
+/* @media screen and (max-width: 904px) and (min-width: 632px){
+    .updateBtn1 {
+        position: relative;
+        left: 191px;
+        top: 56px;
+        background-color: none;
+        background-color: aliceblue;
+        border: none;
+        color: brown;
+    }
+} */
+
+.footer {
+    position: relative;
+    left: -87px;
+    top: 10px;
+}
+.updateBtn1 {
+    position: relative;
+    left: 98px;
+    top: -25px;
+    /* background-color: none; */
+    background-color: aliceblue;
+    border: none;
+    color: brown;
+}

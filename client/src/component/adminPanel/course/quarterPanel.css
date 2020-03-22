@@ -1,0 +1,18 @@
+.addquarterdiv {
+    float: left;
+    padding-left: 31px;
+    padding-top: 224px;
+}
+/* .makeStyles-paper-164{
+    width: 35% !important;
+} */
+.updateQuarterBtn1 {
+    position: relative;
+    left: 191px;
+    top: -27px;
+    cursor: pointer;
+    /* background-color: none; */
+    background-color: aliceblue;
+    border: none;
+    color: brown;
+}
