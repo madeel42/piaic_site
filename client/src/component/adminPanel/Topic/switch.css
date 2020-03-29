@@ -1,0 +1,12 @@
+.react-switch {
+    vertical-align: middle;
+    margin-left: 4px;
+  }
+  .example{
+    margin-left: 85%;
+  }
+  @media screen and (max-width:1176px) and (min-width:745px) {
+    .example{
+      margin-left: 77%;
+    }
+  }

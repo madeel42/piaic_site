@@ -80,7 +80,37 @@ const useStyles = makeStyles(theme => ({
         },
     },
 }));
+const cssstyl = {
+    // width: 100vw;
+    // height: 125px;
+    // width: 100% !important;
+    // float: left;
+    // top: !important;
+    // margin-left: 0px !important;
+    // margin-top: 0px !important;
 
+    width: '100% !important',
+    //  position: relative; 
+    height: '125px',
+marginLeft:'0px !important',
+marginTop:'0px !important',
+    //  top: -39px; 
+    // margin-left: 0px !important; 
+    /* left: 126px; */
+    float: 'left',
+    left: '-12px',
+    // m:'-206px !important';
+    /* margin-top: 0px !important; */
+    position: "relative ",
+                    // backgroundColor: '#08383d',
+                    color: 'white',
+                    width: '100vw',
+
+                    backgroundImage: "-webkit-linear-gradient(right,#08383d,#01645f)",
+                    backgroundImage: "linear-gradient(270deg,#08383d,#01645f)",
+                    // position: fixed;
+                    zIndex: '111112',
+} 
 export default function PrimarySearchAppBar() {
 
 
@@ -165,17 +195,25 @@ export default function PrimarySearchAppBar() {
     return (
 
         <div className='mainDiv animated slideInDown'>
-            <AppBar className='Appbar'
+            <AppBar className='Apbar'
+            // style={cssstyl}
                 style={{
-                    position: "sticky ",
+                    position: "relative ",
                     // backgroundColor: '#08383d',
                     color: 'white',
-                    width: '100vw',
+                    // width: '100vw',
 
                     backgroundImage: "-webkit-linear-gradient(right,#08383d,#01645f)",
                     backgroundImage: "linear-gradient(270deg,#08383d,#01645f)",
                     // position: fixed;
                     zIndex: '111112',
+                    marginLeft:'0px',
+                    marginTop:'0px',
+                    height:'125px',
+                    minWidth:'100%',
+                    top:'-30px',
+                    left:'-236px'
+                    
 
                     // box-shadow: 0 0 9px rgba(0,0,0,.65);
                 }}

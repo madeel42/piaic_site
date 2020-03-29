@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import TextField from "@material-ui/core/TextField";
 import "./examDesin.css";
 import "font-awesome/css/font-awesome.min.css";
 import { de } from "date-fns/locale";
-import {connect} from 'react-redux'
-import middleware from '../../../storeMiddleWare/examDesignMiddleware'
+import { connect } from "react-redux";
+import SwitchComponent from "./switchQuiz";
+import middleware from "../../../storeMiddleWare/examDesignMiddleware";
 const ExamDesign = props => {
   // const [addfield, setaddField] = React.useState([{}]);
+  const [checked, setchecked] = React.useState(false);
+
   let [currentQuestionIndex, setCurrentQuestionIndex] = React.useState(0);
 
   let [questions, setQuestions] = React.useState([
@@ -28,15 +31,45 @@ const ExamDesign = props => {
       ]
     }
   ]);
-
   let [currentQuestion, setCurrentQuestion] = React.useState(
     questions[currentQuestionIndex]
   );
-
   const { closeDivHandler } = props;
+  const handleChangeSwitch = checked => {
+    setchecked(checked);
+    if (checked === true) {
+      let startQuiz = checked;
+
+      console.log(checked);
+      fetch("/createQuiz", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({startQuiz})
+      })
+        .then(res => {
+          return res.json();
+        })
+        .then(res => {
+          console.log(res);
+        });
+    }
+  };
+  // useEffect(() => {
+  //   if (checked === true) {
+  //     fetch("/createQuiz", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json"
+  //       },
+  //       body: JSON.stringify(checked)
+  //     });
+  //   }
+  // }, []);
   const handleQuest_AnswerSubmit = e => {
     e.preventDefault();
-    props.createExam({...currentQuestion})
+    props.createExam({ ...currentQuestion });
     console.log(currentQuestion, "submit value successfully");
   };
   console.log(currentQuestion.answers);
@@ -66,7 +99,6 @@ const ExamDesign = props => {
         }
       ]
     });
-
     setQuestions(questions);
 
     setCurrentQuestion(questions[questions.length - 1]);
@@ -114,9 +146,11 @@ const ExamDesign = props => {
       // setCurrentQuestionIndex(indexx);
     }
   };
+  console.log(checked, "switch");
   console.log(questions, "update examAns");
   return (
     <div>
+      <SwitchComponent checked={checked} handleChange={handleChangeSwitch} />
       <div>
         <TextField
           id="outlined-full-width"
@@ -146,11 +180,12 @@ const ExamDesign = props => {
                   <div className="mapcompDiv">
                     <input
                       type="checkbox"
+                      // onChange = {(e)=> {handleCheckBox(e,i)}}
                       onChange={e => {
                         currentQuestion.answers[i].correct = e.target.checked;
+                        setCurrentQuestion({ ...currentQuestion });
                       }}
-                      id=""
-                      name=""
+                      checked={el.correct}
                       className="chkbox"
                     />
                     <label for="">
@@ -232,11 +267,11 @@ const ExamDesign = props => {
     </div>
   );
 };
-const mapDispatchToProps = (dispatch) => {
-return {
-  createExam : data => {
-    dispatch(middleware.examDesignMiddleware(data))
-  }
-}
-}
-export default connect(null,mapDispatchToProps)(ExamDesign);
+const mapDispatchToProps = dispatch => {
+  return {
+    createExam: data => {
+      dispatch(middleware.examDesignMiddleware(data));
+    }
+  };
+};
+export default connect(null, mapDispatchToProps)(ExamDesign);

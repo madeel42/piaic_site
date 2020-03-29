@@ -1,19 +1,18 @@
-const express = require('express');
-const connectDB = require('./config/db');
-const bodyParser = require('body-parser')
+const express = require("express");
+const connectDB = require("./config/db");
+const bodyParser = require("body-parser");
 const app = express();
 
 // Connceting Database
 connectDB();
 
-
 app.use(express.json({ extended: false }));
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // parse application/json
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
 // app.use(function (req, res) {
 //     res.setHeader('Content-Type', 'text/plain')
@@ -21,8 +20,7 @@ app.use(bodyParser.json())
 //     res.end(JSON.stringify(req.body, null, 2))
 // })
 
-
-app.get('/', (req, res) => res.send("API is runing"));
+app.get("/", (req, res) => res.send("API is runing"));
 
 let { createCourseData } = require("./routes/api/course");
 let { courseDataById } = require("./routes/api/course");
@@ -39,6 +37,10 @@ let { singleQuaterData } = require("./routes/api/quarter");
 let { updateQuarterData } = require("./routes/api/quarter");
 
 //////////////////Routes end////////////
+///////////////////////////////////////
+//////////////////quiz_routes//////////////
+let { createQuiz } = require("./routes/api/quiz");
+///////////////////////////////////////////
 app.post("/createCourse", createCourseData);
 app.get("/getSingleCourse/:courseId", getSingleCourse);
 app.put("/updateCourse/:courseId", updateCourse);
@@ -56,35 +58,38 @@ app.put("/updateQuarterData/:quarterId", updateQuarterData);
 app.param("quarterId", fetchQuarterDataById);
 ///////////////////////////////////////////////////////
 ///////////////////Here we use Topic routes ////////////////
-let {createTopic} = require('./routes/api/topic')
-let {getTopicData} = require('./routes/api/topic')
-let {fetchDataByTopicId} = require('./routes/api/topic')
-let {UpdateTopicData} = require('./routes/api/topic')
-let {getAllTopicDetails_by_their_QuarterId} = require('./routes/api/topic')
-let {fetch_Single_Data_ByTopicId} = require('./routes/api/topic')
+let { createTopic } = require("./routes/api/topic");
+let { getTopicData } = require("./routes/api/topic");
+let { fetchDataByTopicId } = require("./routes/api/topic");
+let { UpdateTopicData } = require("./routes/api/topic");
+let { getAllTopicDetails_by_their_QuarterId } = require("./routes/api/topic");
+let { fetch_Single_Data_ByTopicId } = require("./routes/api/topic");
 ////////////////////////////////////////////////////////////////
-app.post('/createTopic/:quarterId',createTopic)
-app.get('/getTopicData',getTopicData)
-app.get('/getSingleDataByTopicId/:topicId',fetch_Single_Data_ByTopicId)
-app.put('/updateTopicData/:topicId',UpdateTopicData)
-app.get('/getAllTopicDetails_by_their_QuarterId/:quarterId',getAllTopicDetails_by_their_QuarterId)
-app.param('topicId',fetchDataByTopicId);
+app.post("/createTopic/:quarterId", createTopic);
+app.get("/getTopicData", getTopicData);
+app.get("/getSingleDataByTopicId/:topicId", fetch_Single_Data_ByTopicId);
+app.put("/updateTopicData/:topicId", UpdateTopicData);
+app.get(
+  "/getAllTopicDetails_by_their_QuarterId/:quarterId",
+  getAllTopicDetails_by_their_QuarterId
+);
+app.param("topicId", fetchDataByTopicId);
 ///////////////////////////////////////////////
 /////////////////////////here We bring ExamDesign//////////
-let {createExam} = require('./routes/api/examDesign')
+let { createExam } = require("./routes/api/examDesign");
 ///////////////////////////////////////////////////////////
 //////////////////////////here we use examDesign/////////////////
-app.post('/createExam',createExam)
+app.post("/createExam", createExam);
 /////////////////////////////////////////////////////
-app.get('/', (req, res) => res.send("API is runing"));
-
+app.get("/", (req, res) => res.send("API is runing"));
+//////////////////////////////////////
+//////////////////////quiz-routes///////////
+app.post("/createQuiz", createQuiz);
 //Defining all routes
 
-app.use('/api/users', require('./routes/api/users'));
-app.use('/api/auth', require('./routes/api/auth'));
-app.use('/api/profile', require('./routes/api/profile'));
-
-
+app.use("/api/users", require("./routes/api/users"));
+app.use("/api/auth", require("./routes/api/auth"));
+app.use("/api/profile", require("./routes/api/profile"));
 
 const PORT = process.env.PORT || 5000;
 

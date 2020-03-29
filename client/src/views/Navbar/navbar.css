@@ -1,6 +1,6 @@
 .myNavbar .myContainer {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex !important;
+    flex-wrap: wrap !important;
     align-items: center;
     justify-content: space-between;
     width: 100%;
@@ -63,4 +63,22 @@ transition: top 1s linear 1s  ;
 .ty{
 
     color:white
+}
+
+.MuiPaper-root {
+    /* width: 99% !important;
+    height: 125px !important;
+    float: left !important;
+    left: -12% !important;
+    margin-inline-end: -206px !important; */
+    /* position: relative; */
+    /* top: -39px; */
+    /* margin-left: 0px !important; */
+    /* left: 126px; */
+    /* margin-top: 0px !important; */
+}
+
+.Apbar{
+    /* width: 100% !important; */
+    /* height: 125px !important; */
 }
